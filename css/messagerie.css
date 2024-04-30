@@ -1,0 +1,295 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../img/fond2.png');
+  background-size: cover;
+  
+}
+
+header h1 {
+  
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 23px;
+  letter-spacing: -2.6px;
+  word-spacing: 6px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  float: inline-end;
+  text-align: center;
+  margin-top: 5%;
+  
+  }
+  
+  h1 {
+    
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 45px;
+  letter-spacing: -2.6px;
+  word-spacing: 6px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  
+  text-align: center;
+  
+  }
+  .container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+  }
+  header {
+    background: linear-gradient(135deg, #fff7ad, #ffa9f9);
+    color: #333; /* Changez la couleur du texte selon vos préférences */
+    padding: 20px 0;
+     padding: 10px 0;
+  }
+  
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  
+  header img {
+    width: 50px; /* Ajustez la largeur de l'image selon vos besoins */
+    margin-right: 1px; /* Ajoutez une marge à droite pour séparer l'image du texte */
+  }
+
+header img {
+  width: 50px;
+  margin-right: 1px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+.login button,.logout button {
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.login button,.logout button:hover {
+  background-color: #ddd;
+}
+
+section {
+  margin-top: 20px;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Modal Styles */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Main Container Styles */
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#photo {
+  width: 300px;
+  height: 500px;
+  margin-top: 50px;
+  float: left;
+}
+
+h2, p {
+  font-family: Impact, Charcoal, sans-serif;
+  /* ... (rest of the styles for h2 and p) ... */
+}
+
+p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+}
+
+
+h2{
+  text-align: center;
+  font-family: Tahoma;
+  font-size: 30px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  justify-content: center;
+  margin-bottom: 10%; 
+}
+
+/* Messaging Styles */
+.messaging-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.contacts {
+  width: 30%;
+  background-color: #ddd;
+  border-right: 2px double #000;
+  height: 800px;
+}
+
+.contacts h2 {
+  margin-top: 0;
+}
+
+.contacts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contacts li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+
+}
+
+.imgprofil{
+  height: 40px;
+  width: 40px;
+  float: left;
+  border-radius: 100%;
+}
+
+
+.contacts li:hover {
+  background-color: #f0f0f0;
+}
+
+.conversation {
+  width: 65%;
+  position: relative; /* Relative positioning for message input positioning */
+  margin-bottom: 80px; /* Margin to accommodate the fixed message input */
+  
+}
+
+/* Message Input Styles */
+.message-input {
+  position: fixed; /* Fixed position for the message input */
+  bottom: 0;
+  left: 30%; /* Adjust based on the width of contacts */
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  z-index: 1;
+  background-color: transparent; /* Fond transparent */
+    
+
+
+}
+
+textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  background-color: white; /* Fond transparent */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff9999;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+
+

@@ -1,0 +1,252 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../img/fond.png'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+
+
+header h1 {
+  
+font-family: Impact, Charcoal, sans-serif;
+font-size: 23px;
+letter-spacing: -2.6px;
+word-spacing: 6px;
+color: #fff;
+font-weight: 700;
+text-decoration: #fff;
+font-style: normal;
+font-variant: small-caps;
+text-transform: uppercase;
+float: inline-end;
+text-align: center;
+margin-top: 5%;
+
+}
+
+h1 {
+  
+font-family: Impact, Charcoal, sans-serif;
+font-size: 45px;
+letter-spacing: -2.6px;
+word-spacing: 6px;
+color: #000000;
+font-weight: 700;
+text-decoration: rgb(68, 68, 68);
+font-style: normal;
+font-variant: small-caps;
+text-transform: uppercase;
+
+text-align: center;
+
+}
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+header {
+  background: none;
+  color: #fff; /* Changez la couleur du texte selon vos préférences */
+  padding: 20px 0;
+   padding: 10px 0;
+}
+
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+header img {
+  width: 50px; /* Ajustez la largeur de l'image selon vos besoins */
+  margin-right: 1px; /* Ajoutez une marge à droite pour séparer l'image du texte */
+}
+
+
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+.login button {
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+  background-color: #ddd;
+}
+  
+  .text {
+    
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+  
+  .logina button {
+    margin-top: 5%;
+    
+    font-size: 2.5em;
+    
+    
+   
+    
+    
+    
+    border-radius: 28px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 35px;
+    transition: background-color 0.3s ease;
+    }
+  
+  .logina button:hover {
+    background: #ddd;
+  }
+  
+ .logina{
+ 
+  width: 50%;
+  height: auto;
+  justify-content: center;
+  text-align: center;
+  overflow: auto;
+}
+
+
+  section {
+    margin-top: 0px;
+  }
+
+
+
+
+  #accueil{
+    margin-top: 20%;
+    margin-left: 20px;
+    justify-content: center; 
+    align-items: center; 
+    width: auto;
+    height: 600px;
+    
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+
+  
+
+
+
+  h2{
+    font-family: 'Impact', sans-serif;
+    font-size: 90px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    background: linear-gradient(to left,#ff9c00 40%,#fff  100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    } 
+  
+
+
+
+p{
+  font-family: Arial, Charcoal, sans-serif;
+  font-size: 18px;
+  letter-spacing: -1px;
+  word-spacing: 6px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: uppercase;
+}

@@ -1,0 +1,2 @@
+joeDoe,1234,Ilyes,joe@gmail.com,2024-05-01,man,user
+mohamed,123456,lala,moha@gmail.com,2004-05-10,man,user
