@@ -39,12 +39,20 @@ function confirmationLogin($email, $mdp)
             }
             session_start();
             $_SESSION["connecte"] = true;
-            $_SESSION["prenom"] = $info[0];
-            $_SESSION["nomdefamille"] = $info[2];
+            $_SESSION["pseudo"] = $info[0];
+            $_SESSION["prenom"] = $info[2];
             $_SESSION["adressemail"] = $info[3];
-            $_SESSION["datedenaissance"] = $info[4];
-            $_SESSION["genre"] = $info[5];
-            $_SESSION["typedutilisateur"] = $info[6];
+            $_SESSION["nomdefamille"] = $info[4];
+            $_SESSION["datedenaissance"] = $info[5];
+            $_SESSION["genre"] = $info[6];
+            $_SESSION["preference"] = $info[7];
+            $_SESSION["typedutilisateur"] = $info[8];
+            $email = $_SESSION['adressemail'];
+            $dossierImages = "./database/users/".$email; // Modifier le chemin selon votre configuration
+            // Utilisation de glob pour obtenir le nom du fichier
+            $fichiers = glob($dossierImages . "*");
+            $nomFichier = basename($fichiers[0]);
+            $_SESSION["cheminImage"] = "./database/users/moha@gmail.com".$nomFichier;
             header("Location: welcome.php");
             exit();
         }

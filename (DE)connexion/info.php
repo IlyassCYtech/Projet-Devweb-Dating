@@ -51,7 +51,7 @@
 
 
 <div class="profil-container">
-  <img src="../img/femme1.jpeg" alt="Photo de profil" class="profil-image">
+  <img src="<?php echo $_SESSION["cheminImage"];?>" alt="Photo de profil" class="profil-image">
   
 
   <div class="profil-info">

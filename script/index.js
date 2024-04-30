@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="modal-content">
           <span class="close">&times;</span>
           <h2>Connexion</h2>
-          <form id="loginForm" action="./(DE)connexion/confirmLogin.php" method="POST">
+          <form id="loginForm" action="../(DE)connexion/confirmLogin.php" method="POST">
             <label for="username">Identifiant:</label>
             <input type="text" id="username" name="username" required>
             <label for="password">Mot de passe:</label>
@@ -40,20 +40,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const loginFormElement = document.getElementById("loginForm");
     const indentifiant = document.getElementById("username");
     const motDePasse = document.getElementById("username");
-    envoyerRequetephp(indentifiant,motDePasse)
-    {
-      alert("");
-    }
-    
-    loginFormElement.addEventListener("submit", function(event) {
-      event.preventDefault();
-      // Insérer le code pour la soumission du formulaire ici
-      envoyerRequetephp(indentifiant,motDePasse);
-      //alert("Formulaire soumis !");
-      modal.style.display = "none";
-    });
-
-
 
   });
 
@@ -67,64 +53,114 @@ function logout() {
 }
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  const loginButton = document.getElementById("registerButton");
+  const loginForm = document.createElement("div");
+  loginForm.innerHTML = `
+    <div id="sing-in-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Inscription</h2>
+		<form action="./creation/savedb.php" method="post" enctype="multipart/form-data">
+			<fieldset>
+				
+					<legend><strong>Public info</strong></legend>
+					<br>
+				
+					<!-- Simple formulary which will send the signin data to the server if it meets
+						 the requirements for the enrollment -->
+					
+					<!-- Public information area-->
+					<label for="Nickname">Nickname</label> 
+					<input type="text" id="Nickname" name="nickname" placeholder="Nickname" required>
+					<br>
+			
+					<label for="email">Email</label>  
+					<input type="email" id="email" name="email" placeholder="Email" required>
+					<abbr title="the email is unique in the data base">?</abbr>
+					<br>
+			
+					<label for="email">Confirmation email</label> 
+					<input type="email" id="email" name="email" placeholder="Confirm your email" required>
+					<br>
+			
+					<label for="birthday">Birth date</label> 
+					<input type="date" id="birthday" name="birthday">
+					<br>
+			
+					<label for="gender">Gender:</label> 
+					<input type="radio" name="gender" value ="man" >Man</input>
+					<input type="radio" name="gender" value ="woman">Woman</input>
+					<br>
+
+					<label for="gender">Looking for:</label> <br> <!-- lkf : looking for -->
+					<input type="checkbox" name="lkfgender[]" value="Man">Man</input>
+					<input type="checkbox" name="lkfgender[]" value = "woman">Woman</input>
+					<br>
+
+					<label>Pictures</label>
+          <br>
+
+				
+					<!-- following the example of some dating websites, pictures are required for singin -->
+					<input type="file" name="pic[]" id="" accept="image/*" multiple required>
+					
+			</fieldset>
+
+      <br>
+
+			<fieldset id="privFieldSet">
+				<!-- Private information area -->
+				<legend><strong>Private info</strong></legend>
+        <br>
 
 
+				<label for="prenom">Name</label> 
+					<input type="text" id="name" name="name" placeholder="Name" required>
+					<br>
+			
+					<label for="lname">Last name</label> 
+					<input type="text" id="lname" name="lname" placeholder="Last name" required>
+					<br>
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Récupérer tous les contacts
-  var contacts = document.querySelectorAll('.contact');
+					<label for="password">Password</label>
+					<input type="password" name="password" placeholder="Input your password" required>
+					<br>
+					<label for="confpassword">Password confirmation</label>
+					<input type="password" name="confpassword" placeholder="Input your password again" required>
+					<br>
+			</fieldset>
+	
+			<input type="submit" value="Sign up" id="subbutton" >
+		</form>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(loginForm);
 
-  // Ajouter un écouteur d'événements à chaque contact pour changer la conversation
-  contacts.forEach(function(contact) {
-      contact.addEventListener('click', function() {
-          var currentContact = document.getElementById('current-contact');
-          currentContact.textContent = contact.textContent;
+  const modal = document.getElementById("sing-in-modal");
+  const closeButton = document.getElementsByClassName("close")[0];
 
-          // Cacher tous les messages
-          var messages = document.querySelectorAll('.message');
-          messages.forEach(function(message) {
-              message.style.display = 'none';
-          });
-
-          // Afficher les messages correspondant au contact sélectionné
-          var contactName = contact.getAttribute('data-contact');
-          var selectedMessages = document.querySelectorAll('.message.' + contactName);
-          selectedMessages.forEach(function(message) {
-              message.style.display = 'block';
-          });
-      });
+registerButton.addEventListener("click", function() {
+    modal.style.display = "block";
   });
 
-  // Récupérer le bouton "Envoyer"
-  var sendButton = document.getElementById('send-button');
-
-  // Ajouter un écouteur d'événements pour le clic sur le bouton "Envoyer"
-  sendButton.addEventListener('click', function() {
-      // Récupérer le texte du message
-      var messageInput = document.getElementById('message-input');
-      var messageText = messageInput.value.trim();
-      
-      // Vérifier si le message est vide
-      if (messageText === '') {
-          return;
-      }
-
-      // Créer un nouvel élément de message
-      var messageElement = document.createElement('div');
-      messageElement.classList.add('message', 'sent');
-      messageElement.classList.add('ami1'); // Ajouter la classe correspondant au contact
-      messageElement.textContent = messageText;
-
-      // Ajouter le message à la liste des messages
-      var messagesContainer = document.querySelector('.messages');
-      messagesContainer.appendChild(messageElement);
-
-      // Effacer le champ de texte après l'envoi du message
-      messageInput.value = '';
-
-      // Faire défiler jusqu'au bas de la liste des messages
-      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  closeButton.addEventListener("click", function() {
+    modal.style.display = "none";
   });
+
+  window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  const loginFormElement = document.getElementById("loginForm");
+
 });
+
+
+
+
 
 
