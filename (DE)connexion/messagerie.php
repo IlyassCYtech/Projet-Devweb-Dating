@@ -6,9 +6,21 @@
   <title>Consensus</title>
   <link rel="icon" type="image/png" href="../img/logo.png">
   <link rel="stylesheet" href="../css/messagerie.css">
+
+
 </head>
-<body>
-  <script src="../script/welcome.js"></script>
+<?php
+  session_start();
+  if (!isset($_SESSION["connecte"]) || $_SESSION["connecte"] !== true) {
+      header("Location:../index.html");
+      exit();
+  }
+
+
+?>
+<body data-email="<?php echo isset($_SESSION['adressemail']) ? $_SESSION['adressemail'] : ''; ?>">
+  
+  <script src="../script/messagerie.js"></script>
 
   <header>
 
@@ -27,6 +39,7 @@
         <li><a href="parametres.html">Paramètres</a></li>
       </ul>
     </nav>
+    
    <div class="logout">
         
  <button id="logoutButton" onclick="deconnection()">Se Deconnecter</button>
@@ -37,52 +50,37 @@
  
 </header>
 
-<div class="messaging-container">
-  <div class="contacts">
-      <h2>Contacts</h2>
-      <ul>
-          <li class="contact" data-contact="ami1">
-            <img class="imgprofil" src="../img/cuisto.png" alt="img"> 
-            <p>Cuisto</p> 
-          </li>
-          <li class="contact" data-contact="ami2">
-            <img class="imgprofil" src="../img/dark.png" alt="img">
-            <p>Dark</p>
-          </li>
-          <li class="contact" data-contact="ami3">
-            <img class="imgprofil" src="../img/gentil.png" alt="img">
-            <p>Rémy Gentil</p>
-          </li>
-          <li class="contact" data-contact="ami3">
-            <img class="imgprofil" src="../img/profil.png" alt="img">
-            <p>John Shenouda</p>
-          </li>
 
 
+          <div class="messaging-container">
+        <div class="contacts">
+            <h2>Contacts</h2>
+            <ul id="contacts-list">
+                <!-- Contacts will be added here dynamically -->
+            </ul>
+        </div>
+    
 
-          <!-- Ajouter d'autres contacts -->
-      </ul>
-  </div>
+    
   <div class="conversation">
-      <h2>Conversation avec <span id="current-contact">Ami 1</span></h2>
-      <div class="messages">
-          <!-- Ajouter d'autres messages ici -->
-      </div>
-      <div class="message-input">
-          <textarea id="message-input" placeholder="Écrivez votre message..."></textarea>
-          <button id="send-button">Envoyer</button>
-      </div>
+      <h2> <span id="current-contact"> Commencez à parlez ici</span></h2>
+
+      <div class="messages" id="messages-container">
+    <!-- Les messages seront ajoutés ici dynamiquement -->
+</div>
+
+
+      <form id="message-form" class="message-input" method="post">
+        <label for="message-input" >Message:</label><br>
+        <textarea id="message-input" name="message" rows="4" cols="50"></textarea><br>
+        <input type="submit" id="send-button" value="Envoyer">
+    </form>
+
   </div>
 </div>
-<?php
-  session_start();
-  if (!isset($_SESSION["connecte"]) || $_SESSION["connecte"] !== true) {
-      header("Location:../index.html");
-      exit();
-  }
 
 
-?>
+
 
 </body>
 </html>

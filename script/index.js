@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Inscription</h2>
-		<form action="./creation/savedb.php" method="post" enctype="multipart/form-data">
+		<form action="savedb.php" method="post" enctype="multipart/form-data">
 			<fieldset>
 				
 					<legend><strong>Public info</strong></legend>

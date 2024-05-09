@@ -29,12 +29,8 @@ function saveUserData($usrData)
         $_SESSION["preference"] = $usrData[7];
         $_SESSION["typedutilisateur"] = "user";
         $email = $_SESSION['adressemail'];
-        // Chemin du dossier contenant l'image
-        $dossierImages = "./database/users/".$email; // Modifier le chemin selon votre configuration
-        // Utilisation de glob pour obtenir le nom du fichier
-        $fichiers = glob($dossierImages . "*");
-        $nomFichier = basename($fichiers[0]);
-        $_SESSION["cheminImage"] = $dossierImages . $nomFichier;
+        $chemin_fichier = "../database/profil/".$email;
+        $_SESSION["cheminImage"] = $chemin_fichier;
         header("Location: ./(DE)connexion/welcome.php");
     } else {
         echo "Erreur : Impossible d'ouvrir le fichier pour enregistrement des données.";
@@ -50,7 +46,7 @@ function saveUserPhotos($usrName)
         // Access the uploaded file details and check if path exists and creating it otherwise
         $picName = $_FILES['pic']['name'];
         $picError = $_FILES['pic']['error'];
-        $uploadPATH = "./database/users/".$usrName."/";
+        $uploadPATH = "./database/profil/";
         
         if(!file_exists($uploadPATH))
             mkdir($uploadPATH);
@@ -63,7 +59,7 @@ function saveUserPhotos($usrName)
                 $tmpName = $_FILES["pic"]["tmp_name"][$key];
                 $picName = basename($_FILES["pic"]["name"][$key]);
                 move_uploaded_file($tmpName, $uploadPATH.$picName);
-                rename($uploadPATH.$picName,$uploadPATH.$usrName.$count);
+                rename($uploadPATH.$picName,$uploadPATH.$usrName);
                 $count++;
             }
             else

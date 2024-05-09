@@ -10,6 +10,7 @@ body {
   font-family: Arial, sans-serif;
   background-image: url('../img/fond2.png');
   background-size: cover;
+ overflow: hidden;
   
 }
 
@@ -68,10 +69,7 @@ header h1 {
   
   
   
-  header img {
-    width: 50px; /* Ajustez la largeur de l'image selon vos besoins */
-    margin-right: 1px; /* Ajoutez une marge à droite pour séparer l'image du texte */
-  }
+
 
 header img {
   width: 50px;
@@ -197,7 +195,7 @@ h2{
   font-variant: normal;
   text-transform: uppercase;
   justify-content: center;
-  margin-bottom: 10%; 
+  margin-bottom: 5%; 
 }
 
 /* Messaging Styles */
@@ -243,9 +241,47 @@ h2{
 }
 
 .conversation {
-  width: 65%;
+  width: 70%;
   position: relative; /* Relative positioning for message input positioning */
   margin-bottom: 80px; /* Margin to accommodate the fixed message input */
+  
+}
+
+.recu {
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #A8DDFD;
+  width: 70%;
+  height: auto;
+  text-align: left;
+  font: 400 .9em 'Open Sans', sans-serif;
+  border: 1px solid #97C6E3;
+  border-radius: 10px;
+  word-wrap: break-word; /* Ajout de la propriété pour le retour à la ligne */
+
+}
+
+.envoi {
+  position: relative;
+  margin-bottom: 10px;
+  margin-left: 30%;
+  padding: 10px;
+  background-color: #f8e896;
+  width: auto;
+  height: auto;
+  text-align: left;
+  font: 400 .9em 'Open Sans', sans-serif;
+  border: 1px solid #dfd087;
+  border-radius: 10px;
+  word-wrap: break-word; /* Ajout de la propriété pour le retour à la ligne */
+
+}
+
+#messages-container {
+  overflow: auto;
+  height: 40%;
   
 }
 
@@ -277,7 +313,7 @@ textarea {
   background-color: white; /* Fond transparent */
 }
 
-button {
+#send-button{
   padding: 10px 20px;
   background-color: #ff9999;
   color: white;
@@ -289,6 +325,15 @@ button {
 button:hover {
   background-color: white;
   color: black;
+}
+
+
+.heure-message {
+  position: absolute;
+  font-size: .85em;
+  font-weight: 300;
+  bottom: 5px;
+  right: 5px;
 }
 
 
