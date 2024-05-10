@@ -337,4 +337,103 @@ button:hover {
 }
 
 
+/* CSS pour les boutons de suppression et de signalement */
+.delete-button,
+.report-button {
+    background-color: #f44336; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 5px 10px; /* Remplissage intérieur plus petit */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    margin-right: 5px; /* Marge à droite */
+    font-size: 14px; /* Taille de la police */
+}
+
+.delete-button:hover,
+.report-button:hover {
+    background-color: #d32f2f; /* Couleur de fond au survol */
+}
+
+
+/* Style général du modal */
+.modal {
+  display: none; /* Par défaut, le modal est caché */
+  position: fixed; /* Positionnement fixe */
+  z-index: 1; /* Empilement au-dessus de tout le reste */
+  left: 0;
+  top: 0;
+  width: 100%; /* Pleine largeur */
+  height: 100%; /* Pleine hauteur */
+  overflow: auto; /* Ajouter un défilement si nécessaire */
+  background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+}
+
+/* Conteneur du modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* Centrer verticalement et horizontalement */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Largeur du modal */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Ombre */
+}
+
+/* Style du bouton de fermeture du modal */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style du titre du modal */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style du formulaire dans le modal */
+form {
+  margin-top: 20px;
+}
+
+/* Style du libellé et de la liste déroulante */
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Style du bouton de soumission */
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
 

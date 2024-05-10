@@ -79,7 +79,23 @@
   </div>
 </div>
 
-
+ <!-- Fenêtre modale -->
+ <div id="ban-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="reporter-message"></p> <!-- Pour afficher l'adresse e-mail -->
+            <h2>Bannir Utilisateur</h2>
+            <form id="ban-user-form">
+                <label for="ban-reason">Motif de Bannissement :</label>
+                <select id="ban-reason" name="ban-reason">
+                    <option value="Spam">Spam</option>
+                    <option value="Comportement inapproprié">Comportement inapproprié</option>
+                    <option value="Autre">Autre</option>
+                </select>
+                <input type="submit" value="Bannir">
+            </form>
+        </div>
+    </div>
 
 
 </body>

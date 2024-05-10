@@ -108,56 +108,126 @@ function deleteMessage(messageId) {
 
 
 
+function signaleMessage(messageId) {
+    console.log("supprimer :", messageId);
+    // Effectuer une requête AJAX pour supprimer le message avec l'ID donné
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+            if (response.success) {
+                // Message supprimé avec succès, faire quelque chose si nécessaire
+            } else {
+                // Erreur lors de la suppression du message
+                console.error(response.message);
+            }
+        }
+    };
+    xhttp.open("GET", "supprimer_message.php?id=" + encodeURIComponent(messageId), true);
+    xhttp.send();
+}
 
-// Fonction pour créer la structure HTML d'un message
-function createMessageStructure(contenuMessage, heure) {
+
+function banUser(messageId, utilisateur1, utilisateur2, contenuMessage, banReason) {
+    // Effectue une requête AJAX pour envoyer les données au script PHP
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            // Vérifie si la requête a réussi
+            if (xhr.status === 200) {
+                // Met à jour la table des utilisateurs avec les données les plus récentes
+                document.getElementById('user-table').innerHTML = xhr.responseText;
+                // Cache le formulaire après avoir banni l'utilisateur
+                document.getElementById('ban-modal').style.display = 'none';
+            } else {
+                // Affiche un message d'erreur en cas d'échec de la requête
+                alert("Erreur : " + xhr.responseText);
+            }
+        }
+    };
+    // Définit la méthode, l'URL et envoie la requête
+    xhr.open("POST", "signalement.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    // Envoyer les autres éléments nécessaires dans la requête
+    xhr.send("messageId=" + encodeURIComponent(messageId) + "&utilisateur1=" + encodeURIComponent(utilisateur1) + "&utilisateur2=" + encodeURIComponent(utilisateur2) + "&contenuMessage=" + encodeURIComponent(contenuMessage) + "&reason=" + encodeURIComponent(banReason));
+}
+
+
+
+
+function signaleMessage(messageId, utilisateur1, utilisateur2, contenuMessage) {
+    // Fonction pour afficher la fenêtre modale et afficher l'adresse e-mail
+    document.getElementById('ban-modal').style.display = 'block';
+    console.log("expediteur :", utilisateur1);
+    document.getElementById('reporter-message').innerText = "Message signale : " + contenuMessage + "Envoyé par:" + utilisateur1;
+    // Lors de la soumission du formulaire, appeler la fonction pour bannir l'utilisateur
+    document.getElementById('ban-user-form').onsubmit = function(event) {
+        event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+        var banReason = document.getElementById('ban-reason').value;
+        banUser(messageId, utilisateur1, utilisateur2, contenuMessage, banReason);
+    };
+}
+function closeModal() {
+    // Fonction pour fermer la fenêtre modale
+    document.getElementById('ban-modal').style.display = 'none';
+}
+
+
+
+
+
+
+
+function createMessageStructure(contenuMessage, heure, utilisateur1, utilisateur2, type) {
     // Créer un élément div pour le message
     var messageDiv = document.createElement('div');
     messageDiv.classList.add('message');
     messageDiv.setAttribute('id', heure);
     messageDiv.setAttribute('data-message-id', heure);
     messageDiv.textContent = contenuMessage;
+   
+    messageDiv.setAttribute('expediteur', utilisateur1);
+    messageDiv.setAttribute('recepteur', utilisateur2);
 
+    // Créer un élément div pour l'heure du message
+    var heureDiv = document.createElement('div');
+    heureDiv.textContent = heure; // Ajouter l'heure du message
+    heureDiv.classList.add('heure-message'); // Ajouter une classe au div de l'heure du message
 
-
-
-      // Créer un élément div pour l'heure du message
-      var heureDiv = document.createElement('div');
-      heureDiv.textContent = heure; // Ajouter l'heure du message
-      heureDiv.classList.add('heure-message'); // Ajouter une classe au div de l'heure du message
-
-      
-
-      
-      // Ajouter le div de l'heure au div du message
-      messageDiv.appendChild(heureDiv);
+    // Ajouter le div de l'heure au div du message
+    messageDiv.appendChild(heureDiv);
 
     // Créer un sous-div pour les boutons de suppression et de signalement
     var buttonsDiv = document.createElement('div');
     buttonsDiv.classList.add('buttons-container');
     buttonsDiv.style.display = 'none'; // Cacher les boutons initialement
 
-    // Créer les boutons de suppression et de signalement
-    // Créer les boutons de suppression et de signalement
-    var deleteButton = createButton('Supprimer', 'delete-button', function(event) {
-        event.stopPropagation();
-        console.log("Supprimer le message :", contenuMessage);
-        // Appeler la fonction de suppression avec l'ID du message
-        var messageId = messageDiv.getAttribute('data-message-id');
-        deleteMessage(messageId);
-    });
-
-    var reportButton = createButton('Signaler', 'report-button', function(event) {
-        event.stopPropagation();
-        console.log("Signaler le message :", contenuMessage);
-    });
-
-    // Ajouter les boutons au sous-div des boutons
-    buttonsDiv.appendChild(deleteButton);
-    buttonsDiv.appendChild(reportButton);
+    // Créer les boutons en fonction du type
+    if (type === 'signal') {
+        // Créer le bouton de signalement
+        var reportButton = createButton('Signaler', 'report-button', function(event) {
+            event.stopPropagation();
+            console.log("Signaler le message :", contenuMessage);
+            var messageId = messageDiv.getAttribute('data-message-id');
+            var utilisateur1 = messageDiv.getAttribute('expediteur');
+            var utilisateur2 = messageDiv.getAttribute('recepteur');
+            signaleMessage(messageId, utilisateur1, utilisateur2, contenuMessage);
+        });
+        // Ajouter le bouton de signalement au sous-div des boutons
+        buttonsDiv.appendChild(reportButton);
+    } else if (type === 'supprime') {
+        // Créer le bouton de suppression
+        var deleteButton = createButton('Supprimer', 'delete-button', function(event) {
+            event.stopPropagation();
+            console.log("Supprimer le message :", contenuMessage);
+            var messageId = messageDiv.getAttribute('data-message-id');
+            deleteMessage(messageId);
+        });
+        // Ajouter le bouton de suppression au sous-div des boutons
+        buttonsDiv.appendChild(deleteButton);
+    }
 
     // Ajouter les sous-divs au div du message
-   
     messageDiv.appendChild(buttonsDiv);
 
     // Ajouter un gestionnaire d'événements onclick au div du message
@@ -170,6 +240,7 @@ function createMessageStructure(contenuMessage, heure) {
 
     return messageDiv;
 }
+
 
 // Fonction pour charger les messages en fonction de l'adresse e-mail du contact
 function chargerMessages(contactemail) {
@@ -190,15 +261,19 @@ function chargerMessages(contactemail) {
                     var contenuMessage = parts.slice(3).join(';'); // Join les parties restantes en cas de présence de plus d'un point-virgule dans le message
                     var heure = parts[0];
 
-                    // Créer la structure HTML du message
-                    var messageDiv = createMessageStructure(contenuMessage, heure);
+                    
+                    
 
                     // Ajouter la classe appropriée en fonction de l'utilisateur
                     if (utilisateur2 === userEmail && utilisateur1 === contactemail) {
+                        var type= "signal";
+                        var messageDiv = createMessageStructure(contenuMessage, heure, utilisateur1, utilisateur2, type);
                         messageDiv.classList.add('recu');
                     // Ajouter le message à la conversation
                     messagesContainer.appendChild(messageDiv);    
                     } else if (utilisateur1 === userEmail && utilisateur2 === contactemail) {
+                        var type= "supprime";
+                        var messageDiv = createMessageStructure(contenuMessage, heure, utilisateur1, utilisateur2, type);
                         messageDiv.classList.add('envoi');
                     // Ajouter le message à la conversation
                     messagesContainer.appendChild(messageDiv);

@@ -50,8 +50,12 @@ function confirmationLogin($email, $mdp)
             $email = $_SESSION['adressemail'];         
             $chemin_fichier = "../database/profil/".$email;
             $_SESSION["cheminImage"] = $chemin_fichier;
-            
-            header("Location: welcome.php");
+            if($_SESSION["typedutilisateur"] === "admin"){
+            header("Location: ../Admin/Admin.php");
+        }
+            else{
+               header("Location: welcome.php");
+            }
             exit();
         }
     }
