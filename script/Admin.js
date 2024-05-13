@@ -119,7 +119,7 @@ function editUser(email) {
     var userRow = editButton.closest("tr");
     // Parcours chaque cellule de la ligne pour la transformer en champ d'édition (sauf l'adresse email)
     var cells = userRow.querySelectorAll("td");
-    for (var i = 1; i < cells.length - 1; i++) { // Commence à l'index 1 pour éviter de modifier l'adresse email et se termine à l'avant-dernière cellule
+    for (var i = 1; i < cells.length - 2; i++) { // Commence à l'index 1 pour éviter de modifier l'adresse email et se termine à l'avant-dernière cellule
         var cellValue = cells[i].innerText.trim();
         cells[i].innerHTML = "<input type='text' name='" + getFieldName(i) + "' value='" + cellValue + "'>";
     }
@@ -189,3 +189,272 @@ function saveUser(email) {
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(JSON.stringify(values));
 }
+
+
+
+
+
+
+
+
+
+// Fonction pour attacher le gestionnaire d'événements aux boutons de fermeture
+function attachCloseEvent() {
+    var closeButtons = document.getElementsByClassName("close");
+    for (var i = 0; i < closeButtons.length; i++) {
+        closeButtons[i].addEventListener("click", function() {
+            closeMessageModal();
+        });
+    }
+}
+
+// Appeler la fonction pour attacher le gestionnaire d'événements une fois que le DOM est chargé
+document.addEventListener("DOMContentLoaded", function() {
+    attachCloseEvent();
+});
+
+
+// Fonction pour fermer le modal-div
+function closeMessageModal() {
+    var modal = document.getElementById("messageModal");
+    modal.style.display = "none";
+}
+
+
+
+function openModal(mail) {
+    var modal = document.getElementById("messageModal");
+    var messagesContainer = document.getElementById('messages-container');
+    messagesContainer.innerHTML = ''; // Efface les messages précédents
+    
+    document.getElementById("current-contact").textContent ="Choisissez un contact";
+    
+    modal.style.display = "block";
+    // Appeler la fonction AJAX pour récupérer les messages
+    loadContacts(mail);
+}
+
+
+
+
+
+
+   
+
+
+// Fonction pour charger les contacts
+function loadContacts(mail) {
+    console.log("mail:", mail); // Message de débogage
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "../(DE)connexion/get_contacts.php?mail=" + encodeURIComponent(mail), true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            console.log("Réponse du serveur :", xhr.responseText); // Message de débogage
+            var contacts = JSON.parse(xhr.responseText);
+            var contactsList = document.getElementById("contacts-list");
+            contactsList.innerHTML='';
+            contacts.forEach(function(contact) {
+                var li = document.createElement("li");
+                li.className = "contact";
+                li.setAttribute("data-contact", contact.email);
+                // Ajout de l'event listener onclick
+                li.onclick = function() {
+                    contactemail = this.getAttribute("data-contact");
+                    console.log("Contact email cliqué :", contactemail); // Ajout de message de débogage
+                    handleContactClick(mail);
+};
+
+                var img = document.createElement("img");
+                img.className = "imgprofil";
+                img.src = contact.profileImage;
+                img.alt = "Profile Image";
+
+                var p = document.createElement("p");
+                p.textContent = contact.email;
+
+                li.appendChild(img);
+                li.appendChild(p);
+                
+                contactsList.appendChild(li);
+            });
+        }
+    };
+    xhr.send();
+}
+
+
+
+// Fonction pour gérer le clic sur un contact
+function handleContactClick(mail) {
+    console.log("Email du contact :", contactemail);
+    // Mettre à jour le contenu du span avec l'adresse e-mail du contact
+    document.getElementById("current-contact").textContent ="Conversation avec : " +contactemail;
+    getMessages(contactemail, mail);
+}
+
+
+// Fonction pour créer un bouton avec une classe, du texte et un gestionnaire d'événements
+function createButton(text, className, clickHandler) {
+    var button = document.createElement('button');
+    button.textContent = text;
+    button.classList.add(className);
+    button.addEventListener('click', clickHandler);
+    return button;
+}
+
+
+
+
+// Fonction pour supprimer un message
+function deleteMessage(messageId) {
+    console.log("supprimer :", messageId);
+    // Effectuer une requête AJAX pour supprimer le message avec l'ID donné
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+            if (response.success) {
+                // Message supprimé avec succès, faire quelque chose si nécessaire
+            } else {
+                // Erreur lors de la suppression du message
+                console.error(response.message);
+            }
+        }
+    };
+    xhttp.open("GET", "../(DE)connexion/supprimer_message.php?id=" + encodeURIComponent(messageId), true);
+    xhttp.send();
+
+}
+
+
+
+
+
+
+
+
+function createMessageStructure(contenuMessage, heure, utilisateur1, utilisateur2) {
+    // Créer un élément div pour le message
+    var messageDiv = document.createElement('div');
+    messageDiv.classList.add('message');
+    messageDiv.setAttribute('id', heure);
+    messageDiv.setAttribute('data-message-id', heure);
+    messageDiv.textContent = contenuMessage;
+   
+    messageDiv.setAttribute('expediteur', utilisateur1);
+    messageDiv.setAttribute('recepteur', utilisateur2);
+
+    // Créer un élément div pour l'heure du message
+    var heureDiv = document.createElement('div');
+    heureDiv.textContent = heure; // Ajouter l'heure du message
+    heureDiv.classList.add('heure-message'); // Ajouter une classe au div de l'heure du message
+
+    // Ajouter le div de l'heure au div du message
+    messageDiv.appendChild(heureDiv);
+
+    // Créer un sous-div pour les boutons de suppression et de signalement
+    var buttonsDiv = document.createElement('div');
+    buttonsDiv.classList.add('buttons-container');
+    buttonsDiv.style.display = 'none'; // Cacher les boutons initialement
+    
+        // Créer le bouton de suppression
+        var deleteButton = createButton('Supprimer', 'delete-button', function(event) {
+            event.stopPropagation();
+            console.log("Supprimer le message :", contenuMessage);
+            var messageId = messageDiv.getAttribute('data-message-id');
+            deleteMessage(messageId);
+        });
+        // Ajouter le bouton de suppression au sous-div des boutons
+        buttonsDiv.appendChild(deleteButton);
+    
+
+    // Ajouter les sous-divs au div du message
+    messageDiv.appendChild(buttonsDiv);
+
+    // Ajouter un gestionnaire d'événements onclick au div du message
+    messageDiv.addEventListener('click', function(event) {
+        event.stopPropagation(); // Empêcher la propagation de l'événement de clic du message au document
+        console.log("Message cliqué :", contenuMessage);
+        // Afficher ou cacher les boutons de suppression et de signalement
+        buttonsDiv.style.display = (buttonsDiv.style.display === 'none') ? 'block' : 'none';
+    });
+
+    return messageDiv;
+}
+
+
+// Fonction pour charger les messages en fonction de l'adresse e-mail du contact
+function getMessages(contactemail, mail) {
+    
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(this.responseText);
+            if (response.success) {
+                var messagesContainer = document.getElementById('messages-container');
+                messagesContainer.innerHTML = ''; // Efface les messages précédents
+                response.messages.forEach(function(message) {
+                    // Séparer le nom d'utilisateur et le message
+                    var parts = message.split(';');
+
+                    // Extraire les utilisateurs et le contenu du message
+                    var utilisateur1 = parts[1];
+                    var utilisateur2 = parts[2];
+                    var contenuMessage = parts.slice(3).join(';'); // Join les parties restantes en cas de présence de plus d'un point-virgule dans le message
+                    var heure = parts[0];
+
+                   
+                    
+                    
+                    // Ajouter la classe appropriée en fonction de l'utilisateur
+                    if (utilisateur2 === mail && utilisateur1 === contactemail) {
+                        
+                        var messageDiv = createMessageStructure(contenuMessage, heure, utilisateur1, utilisateur2);
+                        messageDiv.classList.add('recu');
+                    // Ajouter le message à la conversation
+                    messagesContainer.appendChild(messageDiv);    
+                    } else if (utilisateur1 === mail && utilisateur2 === contactemail) {
+                        
+                        var messageDiv = createMessageStructure(contenuMessage, heure, utilisateur1, utilisateur2);
+                        messageDiv.classList.add('envoi');
+                    // Ajouter le message à la conversation
+                    messagesContainer.appendChild(messageDiv);
+                    }
+
+                });
+            } else {
+                console.error(response.message);
+            }
+        }
+    };
+    xhttp.open("GET", "../(DE)connexion/gestion-message.php", true);
+    xhttp.send();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Récupérer tous les contacts
+    var contacts = document.querySelectorAll('.contact');
+
+    // Ajouter un écouteur d'événements à chaque contact pour changer la conversation
+    contacts.forEach(function(contact) {
+        contact.addEventListener('click', function() {
+            var currentContact = document.getElementById('current-contact');
+            currentContact.textContent = contact.textContent;
+
+            // Cacher tous les messages
+            var messages = document.querySelectorAll('.message');
+            messages.forEach(function(message) {
+                message.style.display = 'none';
+            });
+
+            // Afficher les messages correspondant au contact sélectionné
+            var contactName = contact.getAttribute('data-contact');
+            var selectedMessages = document.querySelectorAll('.message.' + contactName);
+            selectedMessages.forEach(function(message) {
+                message.style.display = 'block';
+            });
+        });
+    });
+
+
+});

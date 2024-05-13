@@ -9,7 +9,13 @@
 </head>
 <body>
   <script src="../script/welcome.js"></script>
-
+ <?php
+session_start();
+if (!isset($_SESSION["connecte"]) || $_SESSION["connecte"] !== true) {
+    header("Location:../index.html");
+    exit();
+}
+?>
 <header>
   <div class="container">
   <nav>  <a href="welcome.php">
@@ -19,12 +25,20 @@
     
   </nav>
     <nav>
-      <ul>
-        <li><a href="welcome.php">Accueil</a></li>
-        <li><a href="messagerie.php">Messagerie</a></li>
-        <li><a href="info.php">Profil</a></li>
-        <li><a href="parametres.html">Paramètres</a></li>
-      </ul>
+    <ul>
+    <li><a href="welcome.php">Accueil</a></li>
+    <li><a href="messagerie.php">Messagerie</a></li>
+    <li><a href="info.php">Profil</a></li>
+    <li><a href="parametres.html">Paramètres</a></li>
+    
+    <?php
+    // Vérifier le type d'utilisateur
+    if(isset($_SESSION["typedutilisateur"]) && $_SESSION["typedutilisateur"] === "admin") {
+        // Afficher le lien pour l'administration du site
+        echo '<li><a href="../Admin/Admin.php">Gestion site</a></li>';
+    }
+    ?>
+</ul>
     </nav>
   <div class="logout">    
     <button id="logoutButton" onclick="deconnection()">Se Deconnecter</button>
@@ -33,13 +47,7 @@
  
  
 </header>
- <?php
-session_start();
-if (!isset($_SESSION["connecte"]) || $_SESSION["connecte"] !== true) {
-    header("Location:../index.html");
-    exit();
-}
-?>
+
 <!--#####################################################################################################################-->
 
 <div id="pagebas">

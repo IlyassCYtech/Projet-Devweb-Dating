@@ -6,6 +6,12 @@ error_log("Adresse email récupérée : " . $adresseMail); // Message de déboga
 $filePath = "../database/contact.txt";
 error_log("Chemin du fichier : " . $filePath); // Message de débogage
 
+if (isset($_GET['mail'])) {
+    $adresseMail = $_GET['mail'];
+
+} 
+
+
 if (file_exists($filePath)) {
     error_log("Le fichier existe"); // Message de débogage
     $contacts = array();
