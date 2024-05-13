@@ -61,6 +61,7 @@ function banUser(email, reason) {
                 document.getElementById('user-table').innerHTML = xhr.responseText;
                 // Cache le formulaire après avoir banni l'utilisateur
                 document.getElementById('ban-modal').style.display = 'none';
+                location.reload(); // Recharge la page pour mettre à jour la liste des utilisateurs
             } else {
                 // Affiche un message d'erreur en cas d'échec de la requête
                 alert("Erreur : " + xhr.responseText);
@@ -177,6 +178,7 @@ function saveUser(email) {
             if (xhr.status === 200) {
                 // Mettre à jour l'affichage si nécessaire
                 alert("Utilisateur mis à jour avec succès !");
+                location.reload();
             } else {
                 // Gérer les erreurs éventuelles
                 alert("Erreur lors de la mise à jour de l'utilisateur : " + xhr.responseText);
@@ -315,6 +317,7 @@ function deleteMessage(messageId) {
             var response = JSON.parse(this.responseText);
             if (response.success) {
                 // Message supprimé avec succès, faire quelque chose si nécessaire
+                alert("Message supprimer, veuillez recharger quand vous aurez fini de consulter le profil pour appliquer les modifications");
             } else {
                 // Erreur lors de la suppression du message
                 console.error(response.message);

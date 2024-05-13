@@ -10,6 +10,15 @@ if(isset($_GET['email'])) {
     
     // Ouvre le fichier en mode écriture
     $fileHandle = fopen("../database/userList.txt", "w");
+
+
+    $profileFile = "../database/profil/$emailToDelete";
+
+    // Supprime le fichier de profil s'il existe
+    if(file_exists($profileFile)) {
+        unlink($profileFile);
+    }
+
     
     // Parcourt chaque ligne du fichier
     foreach ($file as $line) {
