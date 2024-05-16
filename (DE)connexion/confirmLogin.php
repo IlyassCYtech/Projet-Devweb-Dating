@@ -2,34 +2,6 @@
 $email = $_POST["username"];
 $mdp = $_POST["password"];
 
-function isUserBanned($email) {
-    // Chemin d'accès au fichier de bannissement
-    $banFile = "../database/ban.txt";
-
-    // Vérifie si le fichier de bannissement existe
-    if (file_exists($banFile)) {
-        // Lit le contenu du fichier de bannissement
-        $banData = file_get_contents($banFile);
-
-        // Explode les lignes pour obtenir les adresses e-mail bannies
-        $bannedUsers = explode("\n", $banData);
-
-        // Parcours toutes les entrées de bannissement pour vérifier si l'e-mail est banni
-        foreach ($bannedUsers as $bannedUser) {
-            // Explode chaque entrée pour séparer l'e-mail et le motif
-            $bannedUserData = explode(";", $bannedUser);
-            // Vérifie si l'adresse e-mail fournie correspond à celle dans le fichier de bannissement
-            if (trim($bannedUserData[0]) === $email) {
-                // L'utilisateur est banni
-                return true;
-            }
-        }
-    }
-
-    // L'utilisateur n'est pas banni
-    return false;
-}
-
 function compteRebours() //fonction pour controler le temps d'inactivité d'un utilisateur
 {
     $tempOffLimite = 300; //temps d'inactivité permis en secondes
@@ -55,7 +27,6 @@ function confirmationLogin($email, $mdp)
     $PATH = "../database/userList.txt";
     $utilisateurs = file($PATH, FILE_IGNORE_NEW_LINES); // Lire le fichier et stocker chaque ligne dans un tableau
 
-
     verifieLecture($utilisateurs);
 
     // Vérifier chaque ligne pour trouver une correspondance
@@ -63,9 +34,9 @@ function confirmationLogin($email, $mdp)
         $info = explode(",", $utilisateur);
         if ($info[3] === $email && $info[1] === $mdp) {
             // Afficher chaque élément de la ligne correspondante
-
-            if (!isUserBanned($email)) { 
-            
+            foreach ($info as $element) {
+                echo $element . "<br>";
+            }
             session_start();
             $_SESSION["connecte"] = true;
             $_SESSION["pseudo"] = $info[0];
@@ -85,11 +56,7 @@ function confirmationLogin($email, $mdp)
             else{
                header("Location: welcome.php");
             }
-        
             exit();
-        }
-        header("Location:bannie.php");
-        exit();
         }
     }
 
@@ -102,7 +69,6 @@ function confirmationLogin($email, $mdp)
 if($mdp == "" || $email == "")
     header("Location:../index.html");
 
-    
 // Appeler la fonction pour vérifier l'authentification
 confirmationLogin($email, $mdp);
 
@@ -110,5 +76,5 @@ session_start();
 $_SESSION["duree"] = time();
 
 
-
+echo "here";
 ?>

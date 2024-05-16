@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <input type="text" id="username" name="username" required>
             <label for="password">Mot de passe:</label>
             <input type="password" id="password" name="password" required>
-            <button id="subbutton" type="submit">Se connecter</button>
+            <button type="submit">Se connecter</button>
           </form>
         </div>
       </div>
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
   loginForm.innerHTML = `
     <div id="sing-in-modal" class="modal">
       <div class="modal-content">
-        <span class="close-register">&times;</span>
+        <span class="close">&times;</span>
         <h2>Inscription</h2>
 		<form action="savedb.php" method="post" enctype="multipart/form-data">
 			<fieldset>
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.body.appendChild(loginForm);
 
   const modal = document.getElementById("sing-in-modal");
-  const closeButton = document.getElementsByClassName("close-register")[0];
+  const closeButton = document.getElementsByClassName("close")[0];
 
 registerButton.addEventListener("click", function() {
     modal.style.display = "block";
@@ -158,17 +158,6 @@ registerButton.addEventListener("click", function() {
   const loginFormElement = document.getElementById("loginForm");
 
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 

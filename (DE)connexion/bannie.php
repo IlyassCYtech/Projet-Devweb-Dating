@@ -5,27 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demande de débannissement</title>
     <link rel="stylesheet" type="text/css" href="../css/banni.css">
+
+
 </head>
 <body>
-    <div class="header">
+<div class="header">
         <img src="../img/logo.png" alt="Logo du site">
         <h1>Vous avez été banni !</h1>
     </div>
-    <p>Bravo vous avez été banni : Vous savez déjà pourquoi donc ne jouez pas l'innocent.</p>
-    <p id="countdown">Redirection dans 10 secondes...</p>
-    
-    <script>
-        // Compte à rebours en JavaScript
-        var seconds = 10;
-        var countdown = setInterval(function() {
-            document.getElementById("countdown").innerHTML = "Redirection dans " + seconds + " secondes...";
-            seconds--;
-            if (seconds < 0) {
-                clearInterval(countdown);
-                // Redirection après le compte à rebours
-                window.location.href = "../index.html";
-            }
-        }, 1000);
-    </script>
+    <p>Bravo vous avez ete bani : Vous savez déjà pourquoi donc ne jouer pas l'innocent </p>
+    <form action="/submit_deban_request" method="post">
+        <label for="username">Nom d'utilisateur :</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="reason">Raison du bannissement :</label><br>
+        <textarea id="reason" name="reason" rows="4" required></textarea><br><br>
+        <button type="submit">Envoyer la demande de débannissement</button>
+    </form>
 </body>
 </html>

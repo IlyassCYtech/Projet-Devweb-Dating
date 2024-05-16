@@ -145,6 +145,10 @@ nav ul li a:hover {
   transition: background-color 0.3s ease;
 }
 
+.logout{display:inline-flex;}
+#logoutButton{height:35px; margin-top: 10px;margin-left: 5px;}
+#iconerecherche{height:35px; width: 35px; margin-top: 10px;}
+
 .login button,.logout button:hover {
   background-color: #ddd;
 }

@@ -17,11 +17,11 @@
     
   </nav>
     <nav>
-    <ul>
-        <li><a href="../(DE)connexion/welcome.php">Accueil</a></li>
+      <ul>
         <li><a href="Admin.php">QG</a></li>
-        <li><a href="Signalement-messagerie.php">Signalement-Messagerie</a></li>
-        <li><a href="../(DE)connexion/parametres.html">Paramètres</a></li>
+        <li><a href="messagerie.php">Reclamation</a></li>
+        <li><a href="info.php">BAN</a></li>
+        <li><a href="parametres.html">Paramètres</a></li>
       </ul>
     </nav>
   <div class="logout">    
@@ -30,64 +30,45 @@
   </div>
 
 </header>
-<?php
-session_start();
-if (!isset($_SESSION["connecte"]) || $_SESSION["typedutilisateur"] !== "admin") {
-    header("Location:../index.html");
-    exit();
-}
+  <?php
+  
+  session_start();
+  if (!isset($_SESSION["connecte"]) || $_SESSION["typedutilisateur"] !== "admin") {
+      header("Location:../index.html");
+      exit();
+  }
+  
+    // Chemin d'accès au fichier de signalement
+    $signalementFile = "../database/signalement-message.txt";
 
-// Chemin d'accès au fichier de signalement
-$signalementFile = "../database/signalement-message.txt";
+    // Vérifier si le fichier existe
+    if (file_exists($signalementFile)) {
+        // Lire le contenu du fichier
+        $signalementContent = file_get_contents($signalementFile);
 
-// Initialiser le tableau pour stocker les données
-$signalementData = array();
+        // Diviser le contenu en lignes
+        $signalementLines = explode("\n", $signalementContent);
 
-// Vérifier si le fichier existe
-if (file_exists($signalementFile)) {
-    // Lire le contenu du fichier
-    $signalementContent = file_get_contents($signalementFile);
-
-    // Diviser le contenu en lignes
-    $signalementLines = explode("\n", $signalementContent);
-
-    // Parcourir chaque ligne
-    foreach ($signalementLines as $line) {
-        // Diviser chaque ligne en colonnes
-        $columns = explode(";", $line);
-        // Ajouter les colonnes au tableau de données
-        $signalementData[] = $columns;
-    }
-}
-
-// Afficher les données dans un tableau HTML
-// Afficher les données dans un tableau HTML
-echo "<h1>Signalement des Messages</h1>";
-if (!empty($signalementData)) {
-    echo "<table>";
-    echo "<tr><th>Message ID</th><th>Accusé</th><th>Témoin</th><th>Raison</th><th>Contenu du Message</th><th>Action</th></tr>";
-    foreach ($signalementData as $row) {
-        // Vérifier si la ligne est vide
-        if (!empty($row[0])) {
+        // Afficher les données dans un tableau
+        echo "<h1>Signalement des Messages</h1>";
+        echo "<table>";
+        echo "<tr><th>Message ID</th><th>Utilisateur 1</th><th>Utilisateur 2</th><th>Raison</th><th>Contenu du Message</th></tr>";
+        foreach ($signalementLines as $line) {
+            // Diviser chaque ligne en colonnes
+            $columns = explode(";", $line);
+            // Afficher chaque colonne dans une cellule du tableau
             echo "<tr>";
-            // Accéder à chaque élément de la ligne par son index
-            echo "<td>{$row[0]}</td><td>{$row[1]}</td><td>{$row[2]}</td><td>{$row[3]}</td><td>{$row[4]}</td><td class='cellule-tableau'><button class='btn btn-ban' onclick='banUser(\"{$row[0]}\", \"{$row[1]}\", \"{$row[3]}\")'>Bannir</button><button class='btn btn-delete' onclick='unbanMessage(\"{$row[0]}\")'>Supprimer le signalement</button></td>";
+            foreach ($columns as $column) {
+                echo "<td>$column</td>";
+            }
             echo "</tr>";
         }
+        echo "</table>";
+    } else {
+        // Afficher un message d'erreur si le fichier n'existe pas
+        echo "<p>Aucun signalement de message trouvé.</p>";
     }
-    echo "</table>";
-} else {
-    echo "<p>Aucun signalement de message trouvé.</p>";
-}
-
-?>
-<!-- Modal Div -->
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <p id="modalContent"></p>
-    </div>
-</div>
+  ?>
 
 </body>
 </html>

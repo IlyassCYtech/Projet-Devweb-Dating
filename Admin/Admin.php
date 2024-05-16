@@ -13,14 +13,13 @@
 session_start();
 if (!isset($_SESSION["connecte"]) || $_SESSION["typedutilisateur"] !== "admin") {
     header("Location:../index.html");
-    session_destroy();
     exit();
 }
 ?>
 
 <header>
   <div class="container">
-  <nav>  <a href="../(DE)connexion/welcome.php">
+  <nav>  <a href="welcome.php">
       <img src="../img/logo.png" alt="Logo de Mon Site">
       <h1>Consensus</h1>
     </a>
@@ -28,10 +27,10 @@ if (!isset($_SESSION["connecte"]) || $_SESSION["typedutilisateur"] !== "admin") 
   </nav>
     <nav>
       <ul>
-        <li><a href="../(DE)connexion/welcome.php">Accueil</a></li>
         <li><a href="Admin.php">QG</a></li>
-        <li><a href="Signalement-messagerie.php">Signalement-Messagerie</a></li>
-        <li><a href="../(DE)connexion/parametres.html">Paramètres</a></li>
+        <li><a href="messagerie.php">Reclamation</a></li>
+        <li><a href="info.php">BAN</a></li>
+        <li><a href="parametres.html">Paramètres</a></li>
       </ul>
     </nav>
   <div class="logout">    
@@ -55,8 +54,7 @@ if (!isset($_SESSION["connecte"]) || $_SESSION["typedutilisateur"] !== "admin") 
             <th>Genre</th>
             <th>Préférence</th>
             <th>Type</th>
-            <th>Actions</th>
-            <th>Messagerie</th>
+            <th>Actions</th> 
         </tr>
         <?php
 // Fonction pour vérifier si un utilisateur est banni
@@ -109,15 +107,15 @@ if ($userDataFile) {
         if (!isUserBanned($userData[3])) {
             // L'utilisateur n'est pas banni, affiche les boutons "Supprimer" et "Bannir"
             if ($_SESSION["adressemail"] !== $userData[3]) {
-                echo "<td><button class='btn btn-delete' onclick='deleteUser(\"{$userData[3]}\")'>Supprimer</button> <button class='btn btn-ban' onclick='showBanModal(\"{$userData[3]}\")'>Bannir</button> <button class='btn btn-modifier' onclick='editUser(\"{$userData[3]}\")'>Modifier</button></td><td><button onclick='openModal(\"{$userData[3]}\")'>Messagerie</button></td>";
+                echo "<td><button class='btn btn-delete' onclick='deleteUser(\"{$userData[3]}\")'>Supprimer</button> <button class='btn btn-ban' onclick='showBanModal(\"{$userData[3]}\")'>Bannir</button> <button class='btn btn-modifier' onclick='editUser(\"{$userData[3]}\")'>Modifier</button></td>";
                 echo "</tr>";
             } else {
-                echo "<td>C'EST VOUS !!! <button class='btn btn-modifier' onclick='editUser(\"{$userData[3]}\")'>Modifier</button></td><td><button onclick='openModal(\"{$userData[3]}\")'>Messagerie</button></td>";
+                echo "<td>C'EST VOUS !!! <button class='btn btn-modifier' onclick='editUser(\"{$userData[3]}\")'>Modifier</button></td>";
                 echo "</tr>";
             }
         } else {
             // L'utilisateur est banni, affiche le bouton "Unban"
-            echo "<td><button class='btn btn-delete' onclick='deleteUser(\"{$userData[3]}\")'>Supprimer</button> <button class='btn btn-unban' onclick='unbanUser(\"{$userData[3]}\")'>Unban</button><button class='btn btn-modifier' onclick='editUser(\"{$userData[3]}\")'>Modifier</button></td><td><button onclick='openModal(\"{$userData[3]}\")'>Messagerie</button></td>";
+            echo "<td><button class='btn btn-delete' onclick='deleteUser(\"{$userData[3]}\")'>Supprimer</button> <button class='btn btn-unban' onclick='unbanUser(\"{$userData[3]}\")'>Unban</button><button class='btn btn-modifier' onclick='editUser(\"{$userData[3]}\")'>Modifier</button></td>";
             echo "</tr>";
         }
     }
@@ -148,35 +146,6 @@ if ($userDataFile) {
         </div>
     </div>
     <!-- Inclure les scripts JavaScript ou d'autres dépendances ici -->
-
-    <!-- Modal Div -->
-    <div id="messageModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="messaging-container">
-        <div class="contacts">
-            <h2>Contacts</h2>
-            <ul id="contacts-list">
-                <!-- Contacts will be added here dynamically -->
-            </ul>
-        </div>
-    
-
-    
-  <div class="conversation">
-      <h2> <span id="current-contact"> Commencez à parlez ici</span></h2>
-
-      <div class="messages" id="messages-container">
-    <!-- Les messages seront ajoutés ici dynamiquement -->
-</div>
-
-
-
-
-  </div>
-</div>
-    </div>
-</div>
 </body>
 </html>
 
