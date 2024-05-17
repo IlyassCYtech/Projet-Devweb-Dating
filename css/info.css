@@ -112,9 +112,6 @@ h1 {
   .login button,.logout button:hover {
     background-color: #ddd;
   }
-  .logout{display:inline-flex;}
-  #logoutButton{height:35px; margin-top: 10px;margin-left: 5px;}
-  #iconerecherche{height:35px; width: 35px; margin-top: 10px;}
   
   section {
     margin-top: 20px;

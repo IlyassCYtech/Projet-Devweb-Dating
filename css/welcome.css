@@ -145,10 +145,6 @@ nav ul li a:hover {
   transition: background-color 0.3s ease;
 }
 
-.logout{display:inline-flex;}
-#logoutButton{height:35px; margin-top: 10px;margin-left: 5px;}
-#iconerecherche{height:35px; width: 35px; margin-top: 10px;}
-
 .login button,.logout button:hover {
   background-color: #ddd;
 }
@@ -332,6 +328,33 @@ p{
 .profilacc{
   display: flex;
   margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+  width: 800px;
+  border-radius: 250px 30px 30px 250px;
+  background-color: whitesmoke;
+  border: rgb(73, 73, 73) 1px solid;
+  border-bottom: #000000 1px solid;
+}
+
+.profilaccpan{
+  display: flex;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+  width: 800px;
+  border-radius: 250px 30px 30px 250px;
+  background-color: whitesmoke;
+  border: rgb(73, 73, 73) 1px solid;
+  border-bottom: #000000 1px solid;
+}
+
+
+.profilpanier{
+  display: flex;
+  margin-top: 10px;
   height: 250px;
   width: 800px;
   border-radius: 250px 30px 30px 250px;
@@ -344,7 +367,6 @@ p{
 .texteprof{
   display: grid;
   margin-right: 30%;
-  border: #c0504d 1px solid;
 }
 
 .texteprofcomp{
@@ -357,13 +379,16 @@ p{
   font-family: 'Arial' ;
   font-size: 30px;
 }
-
-.nomprof{  
-  font-size: 40px;
-
+.texteprofilsimple.nomprof{
+  color: #000000;
+  font-family: 'Arial' ;
+  font-size: 30px;
 }
 
-.ageprof{
+
+
+
+.texteprofilsimple.ageprof{
   margin-bottom: 10%;
   margin-left: 10%;
   
@@ -403,7 +428,10 @@ p{
   width: 900px;
   display: none;
   border-radius: 30px;
-  background-color: green;
+  background-color: antiquewhite;
+  overflow: auto;
+  border: #000000 1px solid;
+
   
 }
 
@@ -423,7 +451,7 @@ p{
 
 .ajoutpanier{
   position: relative;
-  right: 3%;
+  left: 42.5%;
   border-radius:50%;
   width:50px;
   height:50px;
@@ -432,14 +460,20 @@ p{
   outline:none;
   font: 18px Tahoma bold;
   color: black;
-  left: 46%;
   top: 20%;
+}
+
+#titrePanier{
+  position: relative;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  font-size: 30px;
 }
 
 #panierboutton{
   position: absolute;
   bottom: 80%;
-  right: 21%;
+  right: 9%;
   border-radius:50%;
   width:50px;
   height:50px;
@@ -453,7 +487,8 @@ p{
 
   .fermercomp {
     position: relative;
-    bottom: -20.5%;
+    bottom: 70.5%;
+    left: 95%;
     text-decoration: none;
     padding: 11px;
     font-family: arial;
@@ -481,4 +516,8 @@ p{
     -moz-box-shadow: 1px 1px 4px #777777;
     }
 
+.retirer{
+  position: relative;
+  margin-left: auto;
+}
 
