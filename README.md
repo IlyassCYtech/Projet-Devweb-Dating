@@ -4,6 +4,10 @@
 ###   Site de rencontre pas comme les autres !
 ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/4a02dde7-a867-4cae-bb1c-0a856f4f419b)
 
+Avec Démo rapide montrant l'adn du site
+![image](https://github.com/IlyassCYtech/devweb/assets/130382885/0011e76f-fc36-4780-bbcc-df635f7bac44)
+
+
 1) Des profils simples et des informations VRAIMENT utiles
 ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/13f3fa72-468f-4dfb-a28d-af1bea4b267c)
 
@@ -16,14 +20,28 @@
 4) Un systeme de messagerie complet
 ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/3b491909-0519-4a97-b77a-63e562657278)
 
-5)Vous pouvez bloquer des utilisateurs malveillants et signaler les messages qui posent problème
+5) Vous pouvez bloquer des utilisateurs malveillants et signaler les messages qui posent problème
 ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/dcf8ac8b-e106-4b14-9616-4c178f95ba47)
 
-6)Des offres d'abonnement interessantes et proposant des avantages exclusifs!
+6) Des offres d'abonnement interessantes et proposant des avantages exclusifs!
 ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/35415718-442c-49e5-83f6-4680db23520a)
 
 7) Possibiliter de rechercher les profils
 ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/a16fb7b3-8e73-49b6-bb8d-199e4c196e63)
+
+###   ADMINISTRATION
+
+1) Accès direct à tous les profils (modification, banissement et suppression de compte) 
+![image](https://github.com/IlyassCYtech/devweb/assets/130382885/ede252b1-982b-4573-8b04-5e2429da41b7)
+
+2) Accès à toutes les messageries
+![image](https://github.com/IlyassCYtech/devweb/assets/130382885/bd3cb816-a93b-425e-8aa9-40f04d9a41a0)
+
+3) Reception des messages signalés et Actions possibles (Suppresion du signalement et banissement)
+![image](https://github.com/IlyassCYtech/devweb/assets/130382885/1eb60f23-0e69-4315-91ae-8fe91421e079)
+
+
+
 
 
 
