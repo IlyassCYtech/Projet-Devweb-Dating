@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* General Styles */
+/* styles généraux */
 body {
   position: relative;
   font-family: Arial, sans-serif;
@@ -124,7 +124,7 @@ footer {
   text-align: center;
 }
 
-/* Modal Styles */
+/* Styles modération */
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
@@ -159,7 +159,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Main Container Styles */
+/* styles du bloc principale */
 .container {
   width: 90%;
   margin: auto;
@@ -176,7 +176,7 @@ footer {
 
 h2, p {
   font-family: Impact, Charcoal, sans-serif;
-  /* ... (rest of the styles for h2 and p) ... */
+  /* ... (reste des styles pour h2 et p) ... */
 }
 
 p{
@@ -202,7 +202,7 @@ h2{
   margin-bottom: 5%; 
 }
 
-/* Messaging Styles */
+/* Styles des messages */
 .messaging-container {
   display: flex;
   justify-content: space-between;
@@ -246,9 +246,9 @@ h2{
 
 .conversation {
   width: 70%;
-  position: relative; /* Relative positioning for message input positioning */
-  margin-bottom: 0; /* Remove the previous margin */
-  padding-bottom: 220px; /* Use padding instead of margin to create space for the fixed message input */
+  position: relative; 
+  margin-bottom: 0; 
+  padding-bottom: 220px; 
   height: 100vh;
  
 }
@@ -510,7 +510,7 @@ input[type="submit"]:hover {
   color: #000;
   padding: 10px;
   background-color: #fff;
-  resize: none; /* Ensure textarea doesn't resize */
+  resize: none; /* pour que le texte reste à la bonne taille */
   border-radius: 24px;
 }
 
