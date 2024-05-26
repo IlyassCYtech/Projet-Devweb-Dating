@@ -1,5 +1,21 @@
 
 ![Ajouter un titre (4)](https://github.com/IlyassCYtech/devweb/assets/130382885/85b1ccd2-2058-468a-bb4a-1df0a7f0e16a)
+---
+## PRÉREQUIS
+
+1) Téléchargez tous les fichiers dans le même dossier.
+2) Installez PHP sur votre PC
+    ```sh
+    sudo apt install php
+    ```
+3) Lancez localhost au niveau du dossier racine dans le terminal
+    ```sh
+    php -S localhost:8000
+    ```
+4) Ouvrez localhost sur la barre du navigateur
+   ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/d55a1bfb-f196-4931-8a15-2974639f0904)
+
+---
 
 # Site de rencontre pas comme les autres !
 
@@ -45,21 +61,6 @@
 
 ---
 
-## PRÉREQUIS
-
-1) Téléchargez tous les fichiers dans le même dossier.
-2) Installez PHP sur votre PC
-    ```sh
-    sudo apt install php
-    ```
-3) Lancez localhost au niveau du dossier racine dans le terminal
-    ```sh
-    php -S localhost:8000
-    ```
-4) Ouvrez localhost sur la barre du navigateur
-   ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/d55a1bfb-f196-4931-8a15-2974639f0904)
-
----
 
 
 
