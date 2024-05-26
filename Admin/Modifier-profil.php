@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vérifie si le décodage JSON a réussi
     if ($values === null) {
         // Gérer les erreurs de décodage JSON
-        http_response_code(400); // Bad Request
+        http_response_code(400); // mauvaise requête
         echo json_encode(['error' => 'Erreur lors du décodage des données JSON']);
         exit;
     }
@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Si l'e-mail n'a pas été trouvé, affiche un message d'erreur
     if (!$found) {
-        http_response_code(404); // Not Found
+        http_response_code(404); // pas trouvé
         echo json_encode(['error' => 'Utilisateur non trouvé']);
         exit;
     }
