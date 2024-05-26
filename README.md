@@ -84,25 +84,5 @@ php -S localhost:8000
 ```
 
 
-###   MENU AVEC INTERFACE
-![Capture_d_écran_du_2024-02-01_22-16-48-removebg-preview](https://github.com/IlyassCYtech/CY-TRUCK/assets/130382885/dc17f277-d0be-4bad-9220-c4b41a532d49)
 
-Dans le menu vous avez différents choix, vous pouvez choisir les traitements que vous souhaitez lancer et leur nombre
-![Capture_d_écran_du_2024-02-01_22-22-05-removebg-preview(1)](https://github.com/IlyassCYtech/CY-TRUCK/assets/130382885/eb42e57d-985b-425d-bec7-bcb39548940f)
-
-
-Vous pouvez aussi verifier que vos fichiers sont compatibles MAIS NE VOUS INQUIETEZ PAS ON LE VERIFIRA POUR VOUS. Vous pouvez aussi aller dans help si vous êtes perdu. Mais aussi vous pouvez arreter le programme.
-
-
-###   COMMANDS
-![image](https://github.com/IlyassCYtech/CY-TRUCK/assets/130382885/5967b343-608a-475f-9d6f-a39a7ab23e49)
-
-Vous pouvez utilisez les fleches pour vous deplacer dans les differents menus sans oublier que 'h' permet de d'ouvrir l'option aide
-
-###   AIDE
-![Capture_d_écran_du_2024-02-01_22-20-04-removebg-preview](https://github.com/IlyassCYtech/CY-TRUCK/assets/130382885/255adbb4-6f43-4feb-99b4-2b23a889d871)
-
-### NOMBRE DE TRAITEMENT A SPECIFIER
-ici vous pouvez spécifier votre nombre de traitement avec une aide
-![Capture_d_écran_du_2024-02-01_22-26-45-removebg-preview](https://github.com/IlyassCYtech/CY-TRUCK/assets/130382885/b9188660-5c23-43ef-a39b-f64d32bb1510)
 
