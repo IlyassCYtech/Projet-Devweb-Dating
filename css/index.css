@@ -1,0 +1,397 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../img/fond.png'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+  
+  h1 {
+    
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 45px;
+  letter-spacing: -2.6px;
+  word-spacing: 6px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  
+  text-align: center;
+  }
+
+header h1 {
+  
+font-family: 'Josefin Sans', sans-serif;
+font-size: 23px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #fff;
+font-weight: 700;
+font-weight: bold;
+text-decoration: #fff;
+font-style: normal;
+font-variant: normal;
+text-transform: uppercase;
+float: inline-end;
+text-align: center;
+margin-top: 5%;
+}
+
+
+
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+header {
+  background: none;
+  color: #fff; /* Changez la couleur du texte selon vos préférences */
+  padding: 20px 0;
+   padding: 10px 0;
+}
+
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+header img {
+  width: 50px; /* Ajustez la largeur de l'image selon vos besoins */
+  margin-right: 1px; /* Ajoutez une marge à droite pour séparer l'image du texte */
+}
+
+
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+.login button {
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+  background-color: #ddd;
+}
+  
+  .text {
+    
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+  
+  .logina button {
+    margin-top: 5%;
+    
+    font-size: 2.5em;
+    
+    
+   
+    
+    
+    
+    border-radius: 28px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 35px;
+    transition: background-color 0.3s ease;
+    }
+  
+  .logina button:hover {
+    background: #ddd;
+  }
+  
+ .logina{
+ 
+  width: 50%;
+  height: auto;
+  justify-content: center;
+  text-align: center;
+  overflow: auto;
+}
+
+
+  section {
+    margin-top: 0px;
+  }
+
+
+
+
+  #accueil{
+    margin-top: 20%;
+    margin-left: 20px;
+    justify-content: center; 
+    align-items: center; 
+    width: auto;
+    height: 600px;
+    
+}
+
+/* Styles communs pour les conteneurs de modales */
+.modal-container,
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  z-index: 9999;
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  overflow: auto;
+}
+
+/* Styles pour le contenu de la modal */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 80%;
+  max-width: 900px;
+  display: flex; /* Utilise flex pour adapter la taille au contenu */
+  flex-direction: column; /* Aligne les éléments verticalement */
+  align-items: center; /* Centre les éléments horizontalement */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto; /* Centre horizontalement le contenu */
+  height: auto;
+  max-height: 900px;
+  overflow: auto;
+}
+
+/* Style pour les fieldsets */
+fieldset {
+  
+  width: 100%;
+  padding: 0;
+  margin: 10px 0;
+  text-align: left;
+}
+
+
+
+#subbutton {
+  background-color: #ff9c00; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement intérieur */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur pointer */
+  margin-top: 10px; /* Espacement en haut */
+}
+
+#subbutton:hover {
+  background-color: #ff9c00; /* Couleur de fond au survol */
+}
+
+
+
+
+
+
+
+
+
+
+  footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+
+  
+
+
+
+  h2{
+    font-family: 'Impact', sans-serif;
+    font-size: 90px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    background: linear-gradient(to left,#ff9c00 40%,#fff  100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    
+}
+    
+  
+
+
+
+p{
+  font-family: Arial, Charcoal, sans-serif;
+  font-size: 18px;
+  letter-spacing: -1px;
+  word-spacing: 6px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: uppercase;
+}
+
+
+/* Style pour le conteneur principal du formulaire */
+
+form {
+  width: 800px;
+}
+
+/* Style pour le titre */
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Style pour les champs de saisie */
+input[type=text], input[type=email], input[type=password], input[type=date], input[type=file], select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 2px;
+  margin-right: 2px;
+  justify-content: end;
+}
+
+/* Style pour les boutons */
+input[type=submit] {
+  width: 80%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style pour les légendes */
+legend {
+  font-weight: bold;
+}
+
+/* Style pour les étiquettes */
+label {
+  font-weight: bold;
+}
+
+/* Style pour la zone de fermeture */
+.close-register {
+  float: right;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.close-register:hover,
+.close-register:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.close-register {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-register:hover,
+.close-register:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

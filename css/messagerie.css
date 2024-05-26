@@ -1,0 +1,570 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* styles généraux */
+body {
+  position: relative;
+  font-family: Arial, sans-serif;
+  background-image: url('../img/fond2.png');
+  background-size: cover;
+ overflow: hidden;
+  
+}
+
+header h1 {
+  
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 23px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000;
+  font-weight: 700;
+  font-weight: bold;
+  text-decoration: #000;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  float: inline-end;
+  text-align: center;
+  margin-top: 5%;
+  }
+
+  
+  h1 {
+    
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 45px;
+  letter-spacing: -2.6px;
+  word-spacing: 6px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  
+  text-align: center;
+  
+  }
+  .container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+  }
+  header {
+    background: linear-gradient(135deg, #fff7ad, #ffa9f9);
+    color: #333; /* Changez la couleur du texte selon vos préférences */
+    padding: 20px 0;
+     padding: 10px 0;
+  }
+  
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  
+
+
+header img {
+  width: 50px;
+  margin-right: 1px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+.login button,.logout button {
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.login button,.logout button:hover {
+  background-color: #ddd;
+}
+
+section {
+  margin-top: 20px;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Styles modération */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* styles du bloc principale */
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  
+}
+
+#photo {
+  width: 300px;
+  height: 500px;
+  margin-top: 50px;
+  float: left;
+}
+
+h2, p {
+  font-family: Impact, Charcoal, sans-serif;
+  /* ... (reste des styles pour h2 et p) ... */
+}
+
+p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+}
+
+
+h2{
+  text-align: center;
+  font-family: Tahoma;
+  font-size: 30px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  justify-content: center;
+  margin-bottom: 5%; 
+}
+
+/* Styles des messages */
+.messaging-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.contacts {
+  width: 30%;
+  background-color: #ddd;
+  border-right: 2px double #000;
+  height: 820px;
+}
+
+.contacts h2 {
+  margin-top: 0;
+}
+
+.contacts ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: auto;
+  height: 810px;
+  overflow: hidden;
+  position: relative;
+}
+
+ul#contacts-list:hover {
+  overflow: auto;
+}
+
+.contacts li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+
+}
+
+.imgprofil{
+  height: 40px;
+  width: 40px;
+  float: left;
+  border-radius: 100%;
+}
+
+
+.contacts li:hover {
+  background-color: #f0f0f0;
+}
+
+.conversation {
+  width: 70%;
+  position: relative; 
+  margin-bottom: 0; 
+  padding-bottom: 220px; 
+  height: 100vh;
+ 
+}
+
+.recu {
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #A8DDFD;
+  width: 70%;
+  height: auto;
+  text-align: left;
+  font: 400 .9em 'Open Sans', sans-serif;
+  border: 1px solid #97C6E3;
+  border-radius: 10px;
+  word-wrap: break-word; /* Ajout de la propriété pour le retour à la ligne */
+
+}
+
+.envoi {
+  position: relative;
+  margin-bottom: 10px;
+  margin-left: 30%;
+  padding: 10px;
+  background-color: #f8e896;
+  width: auto;
+  height: auto;
+  text-align: left;
+  font: 400 .9em 'Open Sans', sans-serif;
+  border: 1px solid #dfd087;
+  border-radius: 10px;
+  word-wrap: break-word; /* Ajout de la propriété pour le retour à la ligne */
+
+}
+
+#messages-container {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px; /* Ajoute un espace entre le message container et le textarea */
+  height: calc(100% - 50px);
+  overflow-y: hidden;
+ 
+}
+#messages-container:hover {
+  overflow-y: auto; /* Afficher la barre de défilement lorsqu'elle est survolée */
+}
+
+/* Message Input Styles */
+.message-input {
+  position: fixed;
+  bottom: 0;
+  left: 30%;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  z-index: 1;
+  background-color: transparent;
+}
+
+
+textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  background-color: white; /* Fond transparent */
+}
+
+#send-button{
+  padding: 10px 20px;
+  background-color: white;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  width: 50px; /* Ajustez la taille du bouton en conséquence */
+  height: 50px; /* Ajustez la taille du bouton en conséquence */
+  padding: 0; /* Supprimer le padding pour que la taille corresponde à celle de l'image */
+  background: url('../img/send.png') no-repeat center center; /* L'image de fond */
+  background-size: cover;
+  border-radius: 50%; /* Pour rendre le bouton rond */
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+}
+#send-button:hover{
+  background-color: rgb(203, 203, 203);
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.heure-message {
+  position: absolute;
+  font-size: .85em;
+  font-weight: 300;
+  bottom: 5px;
+  right: 5px;
+}
+
+
+/* CSS pour les boutons de suppression et de signalement */
+.delete-button,
+.report-button {
+    background-color: #f44336; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 5px 10px; /* Remplissage intérieur plus petit */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointeur */
+    margin-right: 5px; /* Marge à droite */
+    font-size: 14px; /* Taille de la police */
+}
+
+.delete-button:hover,
+.report-button:hover {
+    background-color: #d32f2f; /* Couleur de fond au survol */
+}
+
+
+/* Style général du modal */
+.modal {
+  display: none; /* Par défaut, le modal est caché */
+  position: fixed; /* Positionnement fixe */
+  z-index: 1; /* Empilement au-dessus de tout le reste */
+  left: 0;
+  top: 0;
+  width: 100%; /* Pleine largeur */
+  height: 100%; /* Pleine hauteur */
+  overflow: auto; /* Ajouter un défilement si nécessaire */
+  background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+}
+
+/* Conteneur du modal */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* Centrer verticalement et horizontalement */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Largeur du modal */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Ombre */
+}
+
+/* Style du bouton de fermeture du modal */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style du titre du modal */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style du formulaire dans le modal */
+form {
+  margin-top: 20px;
+}
+
+/* Style du libellé et de la liste déroulante */
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Style du bouton de soumission */
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+.contact {
+  position: relative;
+}
+
+
+.boutonbloquer {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background-image: url('../img/bloquer.png');
+  width: 30px; /* Ajustez la largeur et la hauteur selon vos besoins pour rendre le bouton rond */
+  height: 30px;
+  background-size: cover;
+  border-radius: 50%; /* Pour rendre le bouton rond */
+  border: none; /* Supprimer les bordures si nécessaire */
+  text-indent: -9999px; /* Pour masquer le texte */
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+.form__group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  padding: 5px 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.form__field {
+  font-family: inherit;
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #000;
+  padding: 10px;
+  background-color: #fff;
+  resize: none; /* pour que le texte reste à la bonne taille */
+  border-radius: 24px;
+}
+
+.form__field::placeholder {
+  color: #888;
+}
+
+.submit-button {
+  position: relative;
+  width: 50px; /* Ajustez la taille du bouton en conséquence */
+  height: 50px; /* Ajustez la taille du bouton en conséquence */
+  padding: 0; /* Supprimer le padding pour que la taille corresponde à celle de l'image */
+  background: url('../img/send.png') no-repeat center center; /* L'image de fond */
+  background-size: cover;
+  border-radius: 50%; /* Pour rendre le bouton rond */
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+}
+
+.submit-button span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px; /* Masquer le texte */
+  background-color: white;
+}
+
+
+.submit-button:hover {
+  background-color: rgb(173, 173, 173);
+}
+
+
+.messagetext {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 50px; /* Hauteur de la partie où vous écrivez les messages */
+}
+
+#search {
+  height: 25px;
+  margin-right: 20px;
+  transform: translateY(30%);
+  width: 25px;
+}

@@ -1,0 +1,434 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styles */
+  
+  
+  
+  
+  .profile {
+    position: relative;
+  }
+  
+  .menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px); /* Décalage vers le bas par rapport à l'image de profil */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .menu button {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  /* Afficher le menu lorsque survolé */
+  .profil {
+    display: block;
+  }
+  /* Maintenir le menu affiché lorsque survolé */
+  .menu {
+    display: block;
+  }
+  
+  
+  
+  
+  
+  body {
+    
+    font-family: Arial, sans-serif;
+    background-color: #ccc; /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+    
+    
+  }
+  
+  h1 {
+    
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 45px;
+  
+  word-spacing: 6px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  
+  text-align: center;
+  
+  }
+  
+  header h1 {
+  
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 23px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    color: #000;
+    font-weight: 700;
+    font-weight: bold;
+    text-decoration: #000;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+    float: inline-end;
+    text-align: center;
+    margin-top: 5%;
+    }
+  .container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+  }
+  header {
+    background: linear-gradient(135deg, #fff7ad, #ffa9f9);
+    color: #333; /* Changez la couleur du texte selon vos préférences */
+    padding: 20px 0;
+     padding: 10px 0;
+  }
+  
+  
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  
+  header img {
+    width: 50px; /* Ajustez la largeur de l'image selon vos besoins */
+    margin-right: 1px; /* Ajoutez une marge à droite pour séparer l'image du texte */
+  }
+  
+  
+  
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #fff;
+  }
+  
+  .login button,.logout button {
+    background: #fff;
+    color: #333;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login button,.logout button:hover {
+    background-color: #ddd;
+  }
+
+  .center-table {
+    margin: 0 auto; /* Marge automatique sur les côtés gauche et droit */
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%; /* Tableau avec une largeur de 100% de la fenêtre */
+    max-width: 100%; /* Largeur maximale du tableau pour éviter le débordement */
+    margin: 20px auto; /* Centrer le tableau */
+    
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style pour l'en-tête */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.imgprofil{
+    height: 40px;
+    width: 40px;
+    float: left;
+    border-radius: 100%;
+  }
+
+
+
+    /* Style pour les boutons */
+ .btn {
+    padding: 5px 10px;
+     background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+
+    .btn-delete {
+        background-color: #f44336;
+    }
+    
+    .btn-ban {
+        background-color: #FFA500;
+    }
+
+
+ /* Styles pour la fenêtre modale */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    margin-top: 5%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style pour le paragraphe contenant l'adresse e-mail */
+#ban-email {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Style pour le formulaire */
+#ban-user-form {
+    margin-top: 10px;
+}
+
+/* Style pour le bouton de soumission */
+#ban-user-form input[type="submit"] {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#ban-user-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Pour ajuster la largeur en fonction du texte */
+input[type="text"] {
+    width: 100px; /* Pour que la largeur s'ajuste automatiquement */
+    display: inline-block; /* Pour que l'input ne prenne que la largeur du texte */
+    
+    padding: 0; /* Supprime le rembourrage */
+    margin: 0; /* Supprime les marges */
+    background: none; /* Fond transparent */
+    font-size: inherit; /* Taille de police héritée */
+    font-family: inherit; /* Police héritée */
+    line-height: inherit; /* Hauteur de ligne héritée */
+}
+
+
+/* pour la messagerie */
+.heure-message {
+  position: absolute;
+  font-size: .85em;
+  font-weight: 300;
+  bottom: 5px;
+  right: 5px;
+}
+
+.recu {
+  position: relative;
+  margin-left: 20px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #A8DDFD;
+  width: 70%;
+  height: auto;
+  text-align: left;
+  font: 400 .9em 'Open Sans', sans-serif;
+  border: 1px solid #97C6E3;
+  border-radius: 10px;
+  word-wrap: break-word; /* Ajout de la propriété pour le retour à la ligne */
+
+}
+
+.envoi {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 30%;
+  padding: 10px;
+  background-color: #f8e896;
+  width: auto;
+  height: auto;
+  text-align: left;
+  font: 400 .9em 'Open Sans', sans-serif;
+  border: 1px solid #dfd087;
+  border-radius: 10px;
+  word-wrap: break-word; /* Ajout de la propriété pour le retour à la ligne */
+
+}
+
+#messages-container {
+  overflow: auto;
+  height: 100%;
+  
+
+}
+
+/* Messaging Styles */
+.messaging-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  height: auto;
+}
+
+.contacts {
+  width: 30%;
+  background-color: #ddd;
+  border-right: 2px double #000;
+  height: auto;
+  
+}
+
+.contacts h2 {
+  margin-top: 0;
+}
+
+.contacts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contacts li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+
+}
+
+.imgprofil{
+  height: 40px;
+  width: 40px;
+  float: left;
+  border-radius: 100%;
+}
+
+
+.contacts li:hover {
+  background-color: #f0f0f0;
+}
+
+.conversation {
+  width: 70%;
+  position: relative; 
+  margin-bottom: 80px; 
+  
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#photo {
+  width: 300px;
+  height: 500px;
+  margin-top: 50px;
+  float: left;
+}
+
+h2, p {
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+}
+
+
+h2{
+  text-align: center;
+  font-family: Tahoma;
+  font-size: 30px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  justify-content: center;
+  margin-bottom: 5%; 
+}
