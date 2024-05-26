@@ -6,7 +6,7 @@ if (!isset($_SESSION["connecte"]) || $_SESSION["connecte"] !== true) {
     exit();
 }
 
-
+//récupérer les pseudos des utilisateurs
 function getPseudoForEmail($contactEmail) {
     $filePath = "../database/userList.txt";
     $pseudo = null;
@@ -24,7 +24,7 @@ function getPseudoForEmail($contactEmail) {
 
     return $pseudo;
 }
-
+//récupère les contacts bloqué pour permettre de les afficher
 function getBlockedContacts($filename) {
     $contacts = [];
 
@@ -36,7 +36,7 @@ function getBlockedContacts($filename) {
                 $line = trim($line);
                 if (strpos($line, $_SESSION['adressemail'] . "!") === 0) {
                     list($userEmail, $blockedEmail) = explode("!", $line);
-                        $profileImagePath = "../database/profil/" . $blockedEmail; // Assuming profile images are JPEG files
+                        $profileImagePath = "../database/profil/" . $blockedEmail;
                     if (file_exists($profileImagePath)) {
                         error_log("Image de profil trouvée pour : " . $blockedEmail); // Message de débogage
                         $pseudo = getPseudoForEmail($blockedEmail);
@@ -56,7 +56,7 @@ function getBlockedContacts($filename) {
 $contacts = getBlockedContacts("../database/contact.txt");
 
 if (empty($contacts)) {
-    // Ensure the response contains at least an empty array
+    // S'assurer que la réponse contient au moins un tableau vide
     $contacts = [];
 }
 
