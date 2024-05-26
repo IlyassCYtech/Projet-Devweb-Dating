@@ -18,7 +18,7 @@ error_log("Chemin du fichier : " . $filePath); // Message de débogage
 if (isset($_GET['mail'])) {
     $adresseMail = $_GET['mail'];
 } 
-
+//récupère les pseudos des utilisateurs
 function getPseudoForEmail($contactEmail) {
     $filePath = "../database/userList.txt";
     $pseudo = null;
@@ -69,7 +69,7 @@ if (file_exists($filePath)) {
                 }
                 if ($pairExists) {
                     $contactEmail = ($email1 === $adresseMail) ? $email2 : $email1;
-                    $profileImagePath = "../database/profil/" . $contactEmail; // Assuming profile images are JPEG files
+                    $profileImagePath = "../database/profil/" . $contactEmail;
                     if (file_exists($profileImagePath)) {
                         error_log("Image de profil trouvée pour : " . $contactEmail); // Message de débogage
                         $pseudo = getPseudoForEmail($contactEmail);
