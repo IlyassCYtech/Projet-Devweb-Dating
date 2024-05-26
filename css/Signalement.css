@@ -1,0 +1,261 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styles */
+  
+  
+  
+  
+  .profile {
+    position: relative;
+  }
+  
+  .menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px); /* Décalage vers le bas par rapport à l'image de profil */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .menu button {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  /* Afficher le menu lorsque survolé */
+  .profil {
+    display: block;
+  }
+  /* Maintenir le menu affiché lorsque survolé */
+  .menu {
+    display: block;
+  }
+  
+  
+  
+  
+  
+  body {
+    
+    font-family: Arial, sans-serif;
+    background-color: #ccc; /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+    
+    
+  }
+ 
+ 
+  h1 {
+    
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 45px;
+    
+    word-spacing: 6px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    
+    text-align: center;
+    
+    }
+ 
+ 
+ 
+ 
+ 
+  header h1 {
+  
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 23px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    color: #000;
+    font-weight: 700;
+    font-weight: bold;
+    text-decoration: #000;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+    float: inline-end;
+    text-align: center;
+    margin-top: 5%;
+    }
+  
+  
+  .container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+  }
+  header {
+    background: linear-gradient(135deg, #fff7ad, #ffa9f9);
+    color: #333; /* Changez la couleur du texte selon vos préférences */
+    padding: 20px 0;
+     padding: 10px 0;
+  }
+  
+  
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  
+  header img {
+    width: 50px; /* Ajustez la largeur de l'image selon vos besoins */
+    margin-right: 1px; /* Ajoutez une marge à droite pour séparer l'image du texte */
+  }
+  
+  
+  
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #fff;
+  }
+  
+  .login button,.logout button {
+    background: #fff;
+    color: #333;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login button,.logout button:hover {
+    background-color: #ddd;
+  }
+
+  .center-table {
+    margin: 0 auto; /* Marge automatique sur les côtés gauche et droit */
+}
+
+
+table {
+    border-collapse: collapse;
+    
+    margin: 20px auto; /* Centrer le tableau */
+    
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style pour l'en-tête */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+    /* Styles pour le modal */
+    .modal {
+        display: none; /* Par défaut, le modal est caché */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+        padding-top: 60px;
+    }
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+        /* Style pour les boutons */
+ .btn {
+  padding: 5px 10px;
+   background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+ 
+  margin-right: 2%;
+  
+  }
+
+  .btn-delete {
+      background-color: #f44336;
+  }
+  
+  .btn-ban {
+      background-color: #FFA500;
+      
+  }
+  .cellule-tableau {
+    display: flex;
+    justify-content: space-between; /* Pour espacer les boutons horizontalement */
+  }
+  
