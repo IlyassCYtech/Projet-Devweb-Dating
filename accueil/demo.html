@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page d'Accueil</title>
+  <link rel="stylesheet" href="../css/magasin.css">
+</head>
+<body>
+  <script src="../script/demo.js"></script>
+  <script src="../script/login.js"></script>
+<header>
+
+
+
+
+
+
+  <div class="container">
+    <a href="../index.html">
+      <img src="../img/logo.png" alt="Logo de Mon Site">
+      <h1>Consensus</h1>
+    </a>
+   
+    <nav>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="demo.html">Démo Rapide</a></li>
+        <li><a href="info.html">À Propos</a></li>
+      </ul>
+    </nav>
+    
+    <div class="login">
+      <button id="registerButton">S'inscrire</button>
+      <button id="loginButton">Se Connecter</button>
+    </div>
+  </div>
+</header>
+
+<!--#####################################################################################################################-->
+
+<div id="pagebas">
+
+
+  <div class="profilaccomp" id="Ilyasscomp">
+    <img class="photoprofilcomp" src="../img/Ilyass.jpg">
+    <div class="texteprofcomp">
+      <button class="ajoutpanier" onclick="ajouterAuPanier('Ilyass')"><img src="../img/logo.png" style="height: 50px;"></button>
+
+      <p class="texteprofilcomp nomprofcomp">Ilyass</p>
+      <p class="texteprofilcomp">25 ans</p>
+    </div>
+    <button class="fermercomp" onclick="cacherProfilComplet('Ilyasscomp')">Fermer</button>
+
+  </div>
+
+  <div class="profilaccomp" id="Romanecomp">
+    <img class="photoprofilcomp" src="../img/remy.jpg">
+    <div class="texteprofcomp">
+      <button class="ajoutpanier" onclick="ajouterAuPanier('Romane')"><img src="../img/logo.png" style="height: 50px;"></button>
+
+      <p class="texteprofilcomp nomprofcomp">Romane</p>
+      <p class="texteprofilcomp">30 ans</p>
+    </div>
+    <button class="fermercomp" onclick="cacherProfilComplet('Romanecomp')">Fermer</button>
+
+
+  </div>
+
+  <div class="profilaccomp" id="nidahlacomp">
+    <img class="photoprofilcomp" src="../img/nidahla.jpg">
+    <div class="texteprofcomp">
+      <button class="ajoutpanier" onclick="ajouterAuPanier('nidahla')"><img src="../img/logo.png" style="height: 50px;"></button>
+
+      <p class="texteprofilcomp nomprofcomp">Romane</p>
+      <p class="texteprofilcomp">18 ans</p>
+    </div>
+    <button class="fermercomp" onclick="cacherProfilComplet('nidahlacomp')">Fermer</button>
+
+
+  </div>
+  
+  <div class="profilaccomp" id="shawrovacomp">
+    <img class="photoprofilcomp" src="../img/shawrova.jpg">
+    <div class="texteprofcomp">
+      <button class="ajoutpanier" onclick="ajouterAuPanier('shawrova')"><img src="../img/logo.png" style="height: 50px;"></button>
+
+      <p class="texteprofilcomp nomprofcomp">shawrova</p>
+      <p class="texteprofilcomp">35 ans</p>
+    </div>
+    <button class="fermercomp" onclick="cacherProfilComplet('shawrovacomp')">Fermer</button>
+
+
+  </div>
+
+   <!--<div class="pub" id="pub1"></div>-->  <img  src="../img/pubecosse.png" style=" width: 20%;">
+
+    <div id="listprofil">
+
+      <div class="profilacc" id="Ilyass" onclick="afficherProfil('Ilyass')">
+        <img class="photoprofil" src="../img/Ilyass.jpg">
+        <div class="texteprof">
+
+          <p class="texteprofilsimple nomprof">Ilyass </p>
+          <p class="texteprofilsimple ageprof">25 ans </p>
+        </div>
+      </div>
+
+
+
+      <div class="profilacc" id="Romane" onclick="afficherProfil('Romane')">
+        <img class="photoprofil" src="../img/remy.jpg">
+        <div class="texteprof">
+
+          <p class="texteprofilsimple nomprof">Romane </p>
+          <p class="texteprofilsimple ageprof">30 ans </p>
+
+        </div>
+      </div>
+      
+
+
+      <div class="profilacc" id="nidahla" onclick="afficherProfil('nidahla')">
+        <img class="photoprofil" src="../img/nidahla.jpg">
+        <div class="texteprof">
+          <p class="texteprofilsimple nomprof">Ouardania</p>
+          <p class="texteprofilsimple ageprof">18 ans </p>
+        </div>
+      </div>
+
+
+
+
+      <div class="profilacc" id="shawrova" onclick="afficherProfil('shawrova')">
+        <img class="photoprofil" src="../img/shawrova.jpg">
+        <div class="texteprof">
+          <p class="texteprofilsimple nomprof" >shawrova</p>
+          <p class="texteprofilsimple ageprof" >35 ans </p>
+        </div>
+      </div>
+
+    </div>
+
+   <!-- <div class="pub" id="pub2"></div>-->
+   <img  src="../img/pubcalvi.png" style=" width: 20%;">
+
+<button id="panierboutton" onclick="affichepanier()"><img src="../img/shopping.png" style="height: 50px;"></button>
+
+<div id="panier"></div>
+
+</div>
+
+
+</body>
+</html>
