@@ -68,7 +68,7 @@ if (isset($_SESSION['typedutilisateur']) && $_SESSION['typedutilisateur'] === 'u
   echo '<img src="../img/6.png" alt="User Image" style="width: 20%;">';
 }
 ?>
-
+<!-- afficher les contenu du profil et les différentes options de modification de profil-->
 <div class="profile-container">
     <div class="profile-header">
         <h1>P r o f i l</h1>
