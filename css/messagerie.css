@@ -213,7 +213,7 @@ h2{
   width: 30%;
   background-color: #ddd;
   border-right: 2px double #000;
-  height: 800px;
+  height: 820px;
 }
 
 .contacts h2 {
@@ -223,6 +223,14 @@ h2{
 .contacts ul {
   list-style-type: none;
   padding: 0;
+  overflow: auto;
+  height: 810px;
+  overflow: hidden;
+  position: relative;
+}
+
+ul#contacts-list:hover {
+  overflow: auto;
 }
 
 .contacts li {
