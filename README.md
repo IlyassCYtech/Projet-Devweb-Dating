@@ -22,6 +22,11 @@
 6)Des offres d'abonnement interessantes et proposant des avantages exclusifs!
 ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/35415718-442c-49e5-83f6-4680db23520a)
 
+7) Possibiliter de rechercher les profils
+![image](https://github.com/IlyassCYtech/devweb/assets/130382885/a16fb7b3-8e73-49b6-bb8d-199e4c196e63)
+
+
+
 
 
 ###   PRÉREQUIS
