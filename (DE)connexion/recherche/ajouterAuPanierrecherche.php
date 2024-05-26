@@ -5,7 +5,7 @@ if (!isset($_SESSION["connecte"]) || $_SESSION["connecte"] !== true) {
     header("HTTP/1.1 403 Forbidden");
     exit();
 }
-
+ 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["profilEmail"])) {
     $userEmail = $_SESSION["adressemail"] ?? 'null';
     $profilEmail = $_POST["profilEmail"] ?? 'null';
