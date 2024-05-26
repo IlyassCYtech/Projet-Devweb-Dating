@@ -195,7 +195,7 @@ h1 {
 }
 
 
-    /* Styles pour le modal */
+    /* Styles pour la modération */
     .modal {
         display: none; /* Par défaut, le modal est caché */
         position: fixed;
