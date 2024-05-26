@@ -62,7 +62,7 @@ if (isset($_SESSION['typedutilisateur']) && $_SESSION['typedutilisateur'] === 'u
   </div>  
   </div>
  
- 
+ <!-- affiches les différentes options des paramètres-->
 </header>
 <div class="pagebas">
 <img src="../img/pubecosse.png" style="width: 20%;left:0">
