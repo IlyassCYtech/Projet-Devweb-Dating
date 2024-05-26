@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["profilEmail"])) {
     $userEmail = $_SESSION["adressemail"] ?? 'null';
     $profilEmail = $_POST["profilEmail"] ?? 'null';
     $file = "../../database/contact.txt";
-    $line = $userEmail . ";" . $profilEmail . PHP_EOL;
+    $line = "\n".$userEmail . ";" . $profilEmail . PHP_EOL;
 
     try {
         file_put_contents($file, $line, FILE_APPEND);
