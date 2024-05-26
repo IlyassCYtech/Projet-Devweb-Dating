@@ -42,4 +42,3 @@ Bob,123,Robert,bob93@gmail.com,Fleuriste,2000-07-11,man,woman,Seine-Saint-Denis,
 Clodia,123,Clodia,Clodia@gmail.com,Soufir,2006-05-11,woman,Man,Morbihan,acteur,musique,2024-05-26,user+
 Farah,123,Farah,Farah@gmail.com,Fekir,2002-06-19,woman,Man,Pas-de-Calais,geologue,jardinage,2024-05-26,user+
 Sante,123,Sharro,Benin@gmail.com,Das,1980-05-17,man,woman,Loir-et-Cher,sociologue,philosophie,2024-05-26,user+
-empty,123,Undefined,moga@gmail.com,null,2006-05-01,man,woman,Ardennes,electricien,mode,2024-05-26,user
