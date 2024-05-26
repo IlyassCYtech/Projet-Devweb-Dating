@@ -19,6 +19,11 @@
 5)Vous pouvez bloquer des utilisateurs malveillants et signaler les messages qui posent problème
 ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/dcf8ac8b-e106-4b14-9616-4c178f95ba47)
 
+6)Des offres d'abonnement interessantes et proposant des avantages exclusifs!
+![image](https://github.com/IlyassCYtech/devweb/assets/130382885/35415718-442c-49e5-83f6-4680db23520a)
+
+
+
 ###   PRÉREQUIS
 1) Télécharger tous les fichiers dans le même dossier.
 2) Installer php dans votre pc
