@@ -60,13 +60,7 @@ php -S localhost:8000
 4) Ouvrir localhost sur la bare du navigateur
 ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/d55a1bfb-f196-4931-8a15-2974639f0904)
    
-6)
-7) ssurer de bien avoir mis le fichier source dans le dossier data
-   ![Design sans titre](https://github.com/IlyassCYtech/CY-TRUCKS/assets/130382885/0d5c9432-120f-4365-8914-ab6a66dfdede)
-8) Executer le programme grace à la commande ./Home.sh sans mettre AUCUN argument.
-```sh
-./Home.sh
-```
+
 
 
 
