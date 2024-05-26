@@ -24,13 +24,22 @@ php -S localhost:8000
 
 2) Un algorithme qui traite les profils visibles selon la preference de l'utilisateur
 ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/fff9af44-bc6a-4cfc-bc49-4d4096182b4c)
+ 
+3) Des Informations publiques vraiment synthétique et utiles afin de booster la curiosité des utilisateurs
+![image](https://github.com/IlyassCYtech/devweb/assets/130382885/59c89710-01fa-4c52-aa70-ca98a0ed51b4)
 
-  
-3)
-4)
-5) ssurer de bien avoir mis le fichier source dans le dossier data
+4) Un systeme de messagerie complet
+![image](https://github.com/IlyassCYtech/devweb/assets/130382885/3b491909-0519-4a97-b77a-63e562657278)
+
+5)Vous pouvez bloquer des utilisateurs malveillants et signaler les messages qui posent problème
+![image](https://github.com/IlyassCYtech/devweb/assets/130382885/dcf8ac8b-e106-4b14-9616-4c178f95ba47)
+
+
+   
+6)
+7) ssurer de bien avoir mis le fichier source dans le dossier data
    ![Design sans titre](https://github.com/IlyassCYtech/CY-TRUCKS/assets/130382885/0d5c9432-120f-4365-8914-ab6a66dfdede)
-6) Executer le programme grace à la commande ./Home.sh sans mettre AUCUN argument.
+8) Executer le programme grace à la commande ./Home.sh sans mettre AUCUN argument.
 ```sh
 ./Home.sh
 ```
