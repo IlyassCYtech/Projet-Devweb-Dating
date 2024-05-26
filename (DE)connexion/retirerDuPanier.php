@@ -5,7 +5,7 @@ if (!isset($_SESSION["connecte"]) || $_SESSION["connecte"] !== true) {
     header("HTTP/1.1 403 Forbidden");
     exit();
 }
-
+//retirer un utilisateur du panier
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["profilEmail"])) {
     $userEmail = isset($_SESSION["adressemail"]) ? $_SESSION["adressemail"] : 'null';
     $profilEmail = isset($_POST["profilEmail"]) ? $_POST["profilEmail"] : 'null';
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["profilEmail"])) {
         fclose($handle);
         fclose($tempHandle);
 
-        // Replace the original file with the updated temp file
+        // Remplacer le fichier original par le fichier temporaire mis à jour
         rename($tempFile, $contactFile);
         echo "Success";
     } else {
