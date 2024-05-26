@@ -364,7 +364,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const pic = registrationForm.querySelector('input[type="file"]').files;
     const extentionPermis = ['image/jpeg', 'image/jpg', 'image/png','image/gif','image/bmp','image/webp'];
     let extension = document.getElementById('pic').files[0].type; 
-
+   
     // Vérification des champs de prénom, nom de famille et pseudo
     const nameRegex = /^[a-zA-ZÀ-ÿ]+$/; // Autorise uniquement les lettres de l'alphabet, y compris les accents
     

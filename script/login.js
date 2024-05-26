@@ -360,7 +360,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const metier = registrationForm.metier.value.trim();
     const centre_interet = registrationForm.centre_interet.value.trim();
     const pic = registrationForm.querySelector('input[type="file"]').files;
-
+    const extentionPermis = ['image/jpeg', 'image/jpg', 'image/png','image/gif','image/bmp','image/webp'];
+    let extension = document.getElementById('pic').files[0].type; 
+   
+    if(!(extentionPermis.indexOf(extension)>-1)){
+      alert("La photo de profil doit être une photo !");
+      return
+    }
     // Vérification des champs de prénom, nom de famille et pseudo
     const nameRegex = /^[a-zA-ZÀ-ÿ]+$/; // Autorise uniquement les lettres de l'alphabet, y compris les accents
     if (!nameRegex.test(name)) {
@@ -407,6 +413,10 @@ document.addEventListener("DOMContentLoaded", function() {
         method: 'POST',
         body: formData
       });
+      if(pic.length > 1){
+        alert("L'utilisateur peut avoir une seul photo de profil !");
+        return;
+      }
   
       const result = await response.json();
   
