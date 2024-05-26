@@ -1,21 +1,6 @@
 
 ![Ajouter un titre (4)](https://github.com/IlyassCYtech/devweb/assets/130382885/85b1ccd2-2058-468a-bb4a-1df0a7f0e16a)
 
-###   PRÉREQUIS
-1) Télécharger tous les fichiers dans le même dossier.
-2) Installer php dans votre pc
-```sh
-sudo apt install php
-```
-3) Lancer loclalhsot au niveau du dossier racine dans le terminal
-```sh
-php -S localhost:8000
-```
-4) Ouvrir localhost sur la bare du navigateur
-![image](https://github.com/IlyassCYtech/devweb/assets/130382885/d55a1bfb-f196-4931-8a15-2974639f0904)
-
-
-
 ###   Site de rencontre pas comme les autres !
 ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/4a02dde7-a867-4cae-bb1c-0a856f4f419b)
 
@@ -34,7 +19,18 @@ php -S localhost:8000
 5)Vous pouvez bloquer des utilisateurs malveillants et signaler les messages qui posent problème
 ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/dcf8ac8b-e106-4b14-9616-4c178f95ba47)
 
-
+###   PRÉREQUIS
+1) Télécharger tous les fichiers dans le même dossier.
+2) Installer php dans votre pc
+```sh
+sudo apt install php
+```
+3) Lancer loclalhsot au niveau du dossier racine dans le terminal
+```sh
+php -S localhost:8000
+```
+4) Ouvrir localhost sur la bare du navigateur
+![image](https://github.com/IlyassCYtech/devweb/assets/130382885/d55a1bfb-f196-4931-8a15-2974639f0904)
    
 6)
 7) ssurer de bien avoir mis le fichier source dans le dossier data
