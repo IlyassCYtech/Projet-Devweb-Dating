@@ -1,0 +1,145 @@
+26/05 13:41:51;Candice@gmail.com;Bob@gmail.com;Slt ca va
+26/05 13:43:22;Bob@gmail.com;Candice@gmail.com;Salut Candice ca va et toi
+26/05 13:45:03;Candice@gmail.com;Bob@gmail.com;Oui merci tu as eu des nouvelles de Nick
+26/05 13:46:45;Bob@gmail.com;Candice@gmail.com;Non pas encore tu devrais lui envoyer un message
+26/05 13:48:17;Candice@gmail.com;Nick@gmail.com;Salut Nick tu es dispo pour discuter
+26/05 13:50:01;Nick@gmail.com;Candice@gmail.com;Salut Candice oui je suis dispo comment ca va
+26/05 13:51:43;Candice@gmail.com;Nick@gmail.com;Ca va merci je voulais savoir si tu avais des nouvelles de Claudia
+26/05 13:53:25;Nick@gmail.com;Candice@gmail.com;Oui elle m'a dit qu'elle allait bien elle est juste un peu occupée en ce moment
+26/05 13:55:07;Candice@gmail.com;Nick@gmail.com;D'accord merci pour l'info
+26/05 13:57:49;Claudia@gmail.com;Candice@gmail.com;Salut Candice Nick m'a dit que tu voulais parler
+26/05 13:59:31;Candice@gmail.com;Claudia@gmail.com;Salut Claudia oui je voulais savoir comment tu allais
+26/05 14:01:13;Claudia@gmail.com;Candice@gmail.com;Je vais bien merci et toi
+26/05 14:03:55;Candice@gmail.com;Claudia@gmail.com;Ca va merci tu as vu les nouvelles de ce matin
+26/05 14:05:37;Claudia@gmail.com;Candice@gmail.com;Oui c'est assez incroyable
+
+26/05 13:45:22;Camille@gmail.com;Loric@gmail.com;Salut Loric tu as vu l'email de Samantha
+26/05 13:47:03;Loric@gmail.com;Camille@gmail.com;Salut Camille oui j'ai vu ca qu'est-ce que tu en penses
+26/05 13:48:45;Camille@gmail.com;Loric@gmail.com;Je pense que c'est une bonne idée on devrait en parler avec les autres
+26/05 13:50:27;Loric@gmail.com;Camille@gmail.com;Oui je suis d'accord tu peux envoyer un message à Joe
+26/05 13:52:09;Camille@gmail.com;Joe@gmail.com;Salut Joe tu es au courant de l'email de Samantha
+26/05 13:53:51;Joe@gmail.com;Camille@gmail.com;Salut Camille oui je l'ai vu qu'est-ce que tu en penses
+26/05 13:55:33;Camille@gmail.com;Joe@gmail.com;Je pense que c'est une bonne idée on en parle avec Loric et les autres
+26/05 13:57:15;Joe@gmail.com;Camille@gmail.com;Oui je suis partant je vais en parler à Niska
+26/05 13:58:57;Joe@gmail.com;Niska@gmail.com;Salut Niska tu as vu l'email de Samantha
+26/05 14:00:39;Niska@gmail.com;Joe@gmail.com;Salut Joe oui j'ai vu ca qu'est-ce que tu en penses
+26/05 14:02:21;Joe@gmail.com;Niska@gmail.com;Je pense que c'est une bonne idée Camille et Loric sont d'accord aussi
+26/05 14:04:03;Niska@gmail.com;Joe@gmail.com;D'accord je suis avec vous on en parle aux autres
+
+26/05 13:41:51;Candice@gmail.com;Bob@gmail.com;Slt ca va
+26/05 13:43:22;Bob@gmail.com;Candice@gmail.com;Salut Candice ca va et toi
+26/05 13:45:03;Candice@gmail.com;Bob@gmail.com;Oui merci tu as eu des nouvelles de Nick
+26/05 13:46:45;Bob@gmail.com;Candice@gmail.com;Non pas encore tu devrais lui envoyer un message
+26/05 13:48:17;Candice@gmail.com;Nick@gmail.com;Salut Nick tu es dispo pour discuter
+26/05 13:50:01;Nick@gmail.com;Candice@gmail.com;Salut Candice oui je suis dispo comment ca va
+26/05 13:51:43;Candice@gmail.com;Nick@gmail.com;Ca va merci je voulais savoir si tu avais des nouvelles de Claudia
+26/05 13:53:25;Nick@gmail.com;Candice@gmail.com;Oui elle m'a dit qu'elle allait bien elle est juste un peu occupée en ce moment
+26/05 13:55:07;Candice@gmail.com;Nick@gmail.com;D'accord merci pour l'info
+26/05 13:57:49;Claudia@gmail.com;Candice@gmail.com;Salut Candice Nick m'a dit que tu voulais parler
+26/05 13:59:31;Candice@gmail.com;Claudia@gmail.com;Salut Claudia oui je voulais savoir comment tu allais
+26/05 14:01:13;Claudia@gmail.com;Candice@gmail.com;Je vais bien merci et toi
+26/05 14:03:55;Candice@gmail.com;Claudia@gmail.com;Ca va merci tu as vu les nouvelles de ce matin
+26/05 14:05:37;Claudia@gmail.com;Candice@gmail.com;Oui c'est assez incroyable
+
+26/05 13:45:22;Camille@gmail.com;Loric@gmail.com;Salut Loric tu as vu l'email de Samantha
+26/05 13:47:03;Loric@gmail.com;Camille@gmail.com;Salut Camille oui j'ai vu ca qu'est-ce que tu en penses
+26/05 13:48:45;Camille@gmail.com;Loric@gmail.com;Je pense que c'est une bonne idée on devrait en parler avec les autres
+26/05 13:50:27;Loric@gmail.com;Camille@gmail.com;Oui je suis d'accord tu peux envoyer un message à Joe
+26/05 13:52:09;Camille@gmail.com;Joe@gmail.com;Salut Joe tu es au courant de l'email de Samantha
+26/05 13:53:51;Joe@gmail.com;Camille@gmail.com;Salut Camille oui je l'ai vu qu'est-ce que tu en penses
+26/05 13:55:33;Camille@gmail.com;Joe@gmail.com;Je pense que c'est une bonne idée on en parle avec Loric et les autres
+26/05 13:57:15;Joe@gmail.com;Camille@gmail.com;Oui je suis partant je vais en parler à Niska
+26/05 13:58:57;Joe@gmail.com;Niska@gmail.com;Salut Niska tu as vu l'email de Samantha
+26/05 14:00:39;Niska@gmail.com;Joe@gmail.com;Salut Joe oui j'ai vu ca qu'est-ce que tu en penses
+26/05 14:02:21;Joe@gmail.com;Niska@gmail.com;Je pense que c'est une bonne idée Camille et Loric sont d'accord aussi
+26/05 14:04:03;Niska@gmail.com;Joe@gmail.com;D'accord je suis avec vous on en parle aux autres
+
+26/05 13:30:15;Eric@gmail.com;Robert@gmail.com;Salut Robert tu as reçu mon dernier message
+26/05 13:31:56;Robert@gmail.com;Eric@gmail.com;Salut Eric oui je l'ai bien reçu
+26/05 13:33:38;Eric@gmail.com;Robert@gmail.com;Super tu penses quoi du projet
+26/05 13:35:20;Robert@gmail.com;Eric@gmail.com;Je pense que c'est une bonne opportunité on devrait en parler à Bob
+26/05 13:37:02;Eric@gmail.com;Bob@gmail.com;Salut Bob tu es dispo pour parler du projet avec Robert et moi
+26/05 13:38:44;Bob@gmail.com;Eric@gmail.com;Salut Eric oui je suis dispo c'est une super idée
+26/05 13:40:26;Robert@gmail.com;Eric@gmail.com;Salut Eric je suis d'accord on commence quand
+26/05 13:42:08;Eric@gmail.com;Robert@gmail.com;Demain matin ca te va
+26/05 13:43:50;Robert@gmail.com;Eric@gmail.com;Parfait à demain matin
+
+26/05 14:10:15;Sabrina@gmail.com;Samantha@gmail.com;Salut Samantha tu as vu le dernier message de Camille
+26/05 14:12:01;Samantha@gmail.com;Sabrina@gmail.com;Salut Sabrina oui je l'ai vu qu'est-ce que tu en penses
+26/05 14:13:45;Sabrina@gmail.com;Samantha@gmail.com;Je pense que c'est intéressant on devrait participer
+26/05 14:15:30;Samantha@gmail.com;Sabrina@gmail.com;Je suis d'accord je vais en parler à Ines
+26/05 14:17:10;Samantha@gmail.com;Ines@gmail.com;Salut Ines tu as vu le message de Camille
+26/05 14:18:52;Ines@gmail.com;Samantha@gmail.com;Salut Samantha oui je l'ai vu Sabrina m'en a parlé
+26/05 14:20:35;Samantha@gmail.com;Ines@gmail.com;On devrait participer tu es d'accord
+26/05 14:22:17;Ines@gmail.com;Samantha@gmail.com;Oui tout à fait je suis partante
+
+26/05 14:05:50;Lee99@gmail.com;Loragarnier@gmail.com;Salut Lora tu as des plans pour ce week-end
+26/05 14:07:32;Loragarnier@gmail.com;Lee99@gmail.com;Salut Lee pas encore et toi
+26/05 14:09:15;Lee99@gmail.com;Loragarnier@gmail.com;Rien de prévu on pourrait se retrouver
+26/05 14:11:00;Loragarnier@gmail.com;Lee99@gmail.com;Bonne idée on pourrait inviter Sabrina aussi
+26/05 14:12:45;Lee99@gmail.com;Sabrina@gmail.com;Salut Sabrina tu as des plans pour ce week-end
+26/05 14:14:30;Sabrina@gmail.com;Lee99@gmail.com;Salut Lee pas encore pourquoi
+26/05 14:16:15;Lee99@gmail.com;Sabrina@gmail.com;Lora et moi on pensait se retrouver tu veux venir
+26/05 14:18:00;Sabrina@gmail.com;Lee99@gmail.com;Oui ca serait super à quelle heure
+26/05 14:19:45;Lee99@gmail.com;Sabrina@gmail.com;Vers 14h ca te va
+26/05 14:21:30;Sabrina@gmail.com;Lee99@gmail.com;Parfait à samedi alors
+
+26/05 14:25:15;Farah@gmail.com;Charlene@gmail.com;Salut Charlene tu es libre ce soir
+26/05 14:27:00;Charlene@gmail.com;Farah@gmail.com;Salut Farah oui je suis libre pourquoi
+26/05 14:28:45;Farah@gmail.com;Charlene@gmail.com;Je pensais aller voir un film tu veux venir
+26/05 14:30:30;Charlene@gmail.com;Farah@gmail.com;Oui bonne idée quel film
+26/05 14:32:15;Farah@gmail.com;Charlene@gmail.com;Le nouveau film d'action tu aimes ce genre
+26/05 14:34:00;Charlene@gmail.com;Farah@gmail.com;Oui j'adore à quelle heure
+26/05 14:35:45;Farah@gmail.com;Charlene@gmail.com;La séance est à 20h on se retrouve à 19h30
+26/05 14:37:30;Charlene@gmail.com;Farah@gmail.com;D'accord à ce soir
+
+26/05 13:41:51;Candice@gmail.com;Bob@gmail.com;Slt ca va
+26/05 13:43:22;Bob@gmail.com;Candice@gmail.com;Salut Candice ca va et toi
+26/05 13:45:03;Candice@gmail.com;Bob@gmail.com;Oui merci tu as eu des nouvelles de Nick
+26/05 13:46:45;Bob@gmail.com;Candice@gmail.com;Non pas encore tu devrais lui envoyer un message
+26/05 13:48:17;Candice@gmail.com;Nick@gmail.com;Salut Nick tu es dispo pour discuter
+26/05 13:50:01;Nick@gmail.com;Candice@gmail.com;Salut Candice oui je suis dispo comment ca va
+26/05 13:51:43;Candice@gmail.com;Nick@gmail.com;Ca va merci je voulais savoir si tu avais des nouvelles de Claudia
+26/05 13:53:25;Nick@gmail.com;Candice@gmail.com;Oui elle m'a dit qu'elle allait bien elle est juste un peu occupée en ce moment
+26/05 13:55:07;Candice@gmail.com;Nick@gmail.com;D'accord merci pour l'info
+26/05 13:57:49;Claudia@gmail.com;Candice@gmail.com;Salut Candice Nick m'a dit que tu voulais parler
+26/05 13:59:31;Candice@gmail.com;Claudia@gmail.com;Salut Claudia oui je voulais savoir comment tu allais
+26/05 14:01:13;Claudia@gmail.com;Candice@gmail.com;Je vais bien merci et toi
+26/05 14:03:55;Candice@gmail.com;Claudia@gmail.com;Ca va merci tu as vu les nouvelles de ce matin
+26/05 14:05:37;Claudia@gmail.com;Candice@gmail.com;Oui c'est assez incroyable
+
+26/05 13:45:22;Camille@gmail.com;Loric@gmail.com;Salut Loric tu as vu l'email de Samantha
+26/05 13:47:03;Loric@gmail.com;Camille@gmail.com;Salut Camille oui j'ai vu ca qu'est-ce que tu en penses
+26/05 13:48:45;Camille@gmail.com;Loric@gmail.com;Je pense que c'est une bonne idée on devrait en parler avec les autres
+26/05 13:50:27;Loric@gmail.com;Camille@gmail.com;Oui je suis d'accord tu peux envoyer un message à Joe
+26/05 13:52:09;Camille@gmail.com;Joe@gmail.com;Salut Joe tu es au courant de l'email de Samantha
+26/05 13:53:51;Joe@gmail.com;Camille@gmail.com;Salut Camille oui je l'ai vu qu'est-ce que tu en penses
+26/05 13:55:33;Camille@gmail.com;Joe@gmail.com;Je pense que c'est une bonne idée on en parle avec Loric et les autres
+26/05 13:57:15;Joe@gmail.com;Camille@gmail.com;Oui je suis partant je vais en parler à Niska
+26/05 13:58:57;Joe@gmail.com;Niska@gmail.com;Salut Niska tu as vu l'email de Samantha
+26/05 14:00:39;Niska@gmail.com;Joe@gmail.com;Salut Joe oui j'ai vu ca qu'est-ce que tu en penses
+26/05 14:02:21;Joe@gmail.com;Niska@gmail.com;Je pense que c'est une bonne idée Camille et Loric sont d'accord aussi
+26/05 14:04:03;Niska@gmail.com;Joe@gmail.com;D'accord je suis avec vous on en parle aux autres
+
+26/05 13:30:15;Eric@gmail.com;Robert@gmail.com;Salut Robert tu as reçu mon dernier message
+26/05 13:31:56;Robert@gmail.com;Eric@gmail.com;Salut Eric oui je l'ai bien reçu
+26/05 13:33:38;Eric@gmail.com;Robert@gmail.com;Super tu penses quoi du projet
+26/05 13:35:20;Robert@gmail.com;Eric@gmail.com;Je pense que c'est une bonne opportunité on devrait en parler à Bob
+26/05 13:37:02;Eric@gmail.com;Bob@gmail.com;Salut Bob tu es dispo pour parler du projet avec Robert et moi
+26/05 13:38:44;Bob@gmail.com;Eric@gmail.com;Salut Eric oui je suis dispo c'est une super idée
+26/05 13:40:26;Robert@gmail.com;Eric@gmail.com;Salut Eric je suis d'accord on commence quand
+26/05 13:42:08;Eric@gmail.com;Robert@gmail.com;Demain matin ca te va
+26/05 13:43:50;Robert@gmail.com;Eric@gmail.com;Parfait à demain matin
+
+26/05 14:10:15;Sabrina@gmail.com;Samantha@gmail.com;Salut Samantha tu as vu le dernier message de Camille
+26/05 14:12:01;Samantha@gmail.com;Sabrina@gmail.com;Salut Sabrina oui je l'ai vu qu'est-ce que tu en penses
+26/05 14:13:45;Sabrina@gmail.com;Samantha@gmail.com;Je pense que c'est intéressant on devrait participer
+26/05 14:15:30;Samantha@gmail.com;Sabrina@gmail.com;Je suis d'accord je vais en parler à Ines
+26/05 14:17:10;Samantha@gmail.com;Ines@gmail.com;Salut Ines tu as vu le message de Camille
+26/05 14:18:52;Ines@gmail.com;Samantha@gmail.com;Salut Samantha oui je l'ai vu Sabrina m'en a parlé
+26/05 14:20:35;Samantha@gmail.com;Ines@gmail.com;On devrait participer tu es d'accord
+26/05 14:22:17;Ines@gmail.com;Samantha@gmail.com;Oui tout à fait je suis partante
+26/05 14:20:07;Nidhal@gmail.com;john@gmail.com;slt john
+26/05 14:20:12;Nidhal@gmail.com;john@gmail.com;Jtm
+26/05 14:20:25;Nidhal@gmail.com;Benin@gmail.com;Apprend moi la spiritualite
+26/05 14:20:27;Nidhal@gmail.com;Benin@gmail.com;jtm

@@ -1,0 +1,6 @@
+samantha@gmail.com;sarah@gmail.com;Sarah;woman;Man;1996-06-26;Loiret;libraire;photographie;26-05-2024
+Nidhal@gmail.com;Candice@gmail.com;Candice;woman;Man;2000-05-26;Maine-et-Loire;styliste;mode;26-05-2024
+Ilyass@gmail.com;Candice@gmail.com;Candice;woman;Man;2000-05-26;Maine-et-Loire;styliste;mode;26-05-2024
+Nidhal@gmail.com;Ilyass@gmail.com;Ilyass;man;woman;2004-09-01;Seine-Saint-Denis;ingenieur;technologie;26-05-2024
+Ilyass@gmail.com;Nidhal@gmail.com;Nidhal;man;woman;2004-07-08;Val-dOise;developpeur;animaux;26-05-2024
+Felipe@gmail.com;Nidhal@gmail.com;Nidhal;man;woman;2004-07-08;Val-dOise;developpeur;animaux;26-05-2024
