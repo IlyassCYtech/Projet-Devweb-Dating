@@ -1,10 +1,10 @@
 <?php
-function addInfo($utilListe) //fonction ajoute les informations dans une chaine de charactere
+function addInfo($utilListe) //fonction qui ajoute les informations dans une chaine de charactere
 {
     $personnesRetrouve = $utilListe[0] . "," . $utilListe[2] . "," . $utilListe[3] . "," . $utilListe[4].",".$utilListe[5].",".$utilListe[6].",".$utilListe[7].",".$utilListe[8].','.$utilListe[9].','.$utilListe[10];
     return $personnesRetrouve;
 }
-//function parcourt tout le fichier userList en cherchant toute occurence du pseudo recherché
+//fonction qui parcourt tout le fichier userList en cherchant toute occurence du pseudo recherché
 function verif_recherche($pseudo)
 {
     $userListPath = "../../database/userList.txt";
@@ -41,7 +41,7 @@ function verif_recherche($pseudo)
     }
 }
 
-function extraireChamps($del, $str,$indice) //transforme une string en array et renvoie lelement a un certain indice
+function extraireChamps($del, $str,$indice) //transforme une string en array et renvoie l'element a un certain indice
 {
     $arr = explode($del,$str);
     return $arr[$indice];
@@ -105,7 +105,7 @@ if (isset($data["pseudo"]))
         echo json_encode($pseudosTrv);
 } else 
 {
-    // Handle missing or invalid input
+    // gère les entrées manquantes ou invalides
     echo json_encode(["error" => "Pseudo manquant"]);
 }
 ?>
