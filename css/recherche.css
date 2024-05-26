@@ -332,9 +332,9 @@ color: #000000;
 
 font-size: 60px;
 text-align: center;
-white-space: nowrap; /* Prevent text from wrapping */
+white-space: nowrap; /* empêche l'image de se déformer*/
 font-weight: normal;
-font-family: 'Georgia', serif; /* Apply Georgia to the entire body */
+font-family: 'Georgia', serif;
 width: 100%;
 }
 
