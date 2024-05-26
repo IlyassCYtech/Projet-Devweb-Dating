@@ -69,20 +69,4 @@ php -S localhost:8000
 ```
 
 
-###   UTILISER SANS INTERFACE
-1) Recuperer le chemin d'acces du fichier
- ```sh
-/cheminduficher
-```
-2) Entrer -h en argument pour acceder au menu
-```sh
-./Home.sh /cheminduficheier -h
-```
-3) Executer le programme grace à la commande ./Home.sh sans oublier les arguments.
-```sh
-./Home.sh /chemindufichier -d1 -d2 -l -s -t -bonus
-```
-
-
-
 
