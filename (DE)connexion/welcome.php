@@ -122,7 +122,7 @@ if (isset($_SESSION['typedutilisateur']) && $_SESSION['typedutilisateur'] === 'u
   <div id="listprofil">
 
 
-  <!-- Other elements like panier button, etc. -->
+  <!-- autres éléments comme le panier, le boutton, etc. -->
 
 </div>
 <?php
