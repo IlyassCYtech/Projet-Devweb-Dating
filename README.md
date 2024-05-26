@@ -19,17 +19,18 @@ php -S localhost:8000
 ###   Site de rencontre pas comme les autres !
 ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/4a02dde7-a867-4cae-bb1c-0a856f4f419b)
 
-1) Entrer dans le dossier depuis le terminal
-```sh
-cd CY-TRUCKS 
-```
-```sh
-mkdir data 
-```
+1) Des profils simples et des informations VRAIMENT utiles
+![image](https://github.com/IlyassCYtech/devweb/assets/130382885/13f3fa72-468f-4dfb-a28d-af1bea4b267c)
 
-2) S'assurer de bien avoir mis le fichier source dans le dossier data
+2) Un algorithme qui traite les profils visibles selon la preference de l'utilisateur
+![image](https://github.com/IlyassCYtech/devweb/assets/130382885/fff9af44-bc6a-4cfc-bc49-4d4096182b4c)
+
+  
+3)
+4)
+5) ssurer de bien avoir mis le fichier source dans le dossier data
    ![Design sans titre](https://github.com/IlyassCYtech/CY-TRUCKS/assets/130382885/0d5c9432-120f-4365-8914-ab6a66dfdede)
-3) Executer le programme grace à la commande ./Home.sh sans mettre AUCUN argument.
+6) Executer le programme grace à la commande ./Home.sh sans mettre AUCUN argument.
 ```sh
 ./Home.sh
 ```
