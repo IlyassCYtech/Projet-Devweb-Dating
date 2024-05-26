@@ -300,9 +300,9 @@ p.texteprofcomp.nomprofcomp{
   
   font-size: 65px;
   text-align: center;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap; /* empêche la déformation */
   font-weight: normal;
-  font-family: 'Georgia', serif; /* Apply Georgia to the entire body */
+  font-family: 'Georgia', serif;
   width: 100%;
 }
 
@@ -420,9 +420,9 @@ p.texteprofcomp.nomprofcomp{
   
   font-size: 60px;
   text-align: center;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap;
   font-weight: normal;
-  font-family: 'Georgia', serif; /* Apply Georgia to the entire body */
+  font-family: 'Georgia', serif; 
   width: 100%;
 }
 
