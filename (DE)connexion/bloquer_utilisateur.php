@@ -6,7 +6,7 @@ if (!isset($_SESSION["connecte"]) || $_SESSION["connecte"] !== true) {
     header("HTTP/1.1 403 Forbidden");
     exit();
 }
-
+//récupère les personnes à bloquer
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $userEmail = $_POST['userEmail'];
     $contactEmail = $_POST['contactEmail'];
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $contents = file_get_contents($path);
     $lines = explode("\n", $contents);
     $updatedLines = [];
-
+//cherche les utilisateurs bloqué et modifie les données en conséquence
     foreach ($lines as $line) {
         if (trim($line) == "{$userEmail};{$contactEmail}") {
             $updatedLines[] = "{$userEmail}!{$contactEmail}";
