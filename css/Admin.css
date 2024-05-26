@@ -388,8 +388,8 @@ input[type="text"] {
 
 .conversation {
   width: 70%;
-  position: relative; /* Relative positioning for message input positioning */
-  margin-bottom: 80px; /* Margin to accommodate the fixed message input */
+  position: relative; 
+  margin-bottom: 80px; 
   
 }
 
@@ -408,7 +408,6 @@ input[type="text"] {
 
 h2, p {
   font-family: Impact, Charcoal, sans-serif;
-  /* ... (rest of the styles for h2 and p) ... */
 }
 
 p{
