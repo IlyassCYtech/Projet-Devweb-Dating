@@ -1,4 +1,4 @@
-Ilyass,123,Ilyass,Ilyass@gmail.com,Chakhmoun,2004-09-01,man,woman,Seine-Saint-Denis,ingenieur,technologie,2024-05-26,user+
+Ilyass,123,Ilyass,Ilyass@gmail.com,Chakhmoun,2004-09-01,man,woman,Seine-Saint-Denis,ingenieur,technologie,2024-05-26,admin
 Felipe,123,Felipe,Felipe@gmail.com,Zani,2002-01-03,man,woman,Val-dOise,ingenieur,politique,2024-05-26,user
 Remy,123,Remy,Remy@gmail.com,Boreill,2003-05-07,man,woman,Loiret,chef_cuisinier,cuisine,2024-05-26,user+
 Nidhal,123,Nidhal,Nidhal@gmail.com,Ouardani,2004-07-08,man,woman,Val-dOise,developpeur,animaux,2024-05-26,user+
