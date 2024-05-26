@@ -135,7 +135,7 @@ if (isset($_SESSION['typedutilisateur']) && $_SESSION['typedutilisateur'] === 'u
                             "05" => "Hautes-Alpes", "06" => "Alpes-Maritimes", "07" => "Ardèche", "08" => "Ardennes",
                             "09" => "Ariège", "10" => "Aube", "11" => "Aude", "12" => "Aveyron", "13" => "Bouches-du-Rhône",
                             "14" => "Calvados", "15" => "Cantal", "16" => "Charente", "17" => "Charente-Maritime",
-                            "18" => "Cher", "19" => "Corrèze", "21" => "Côte-d'Or", "22" => "Côtes-d'Armor", "23" => "Creuse",
+                            "18" => "Cher", "19" => "Corrèze", "21" => "Côte-dOr", "22" => "Côtes-dArmor", "23" => "Creuse",
                             "24" => "Dordogne", "25" => "Doubs", "26" => "Drôme", "27" => "Eure", "28" => "Eure-et-Loir",
                             "29" => "Finistère", "30" => "Gard", "31" => "Haute-Garonne", "32" => "Gers", "33" => "Gironde",
                             "34" => "Hérault", "35" => "Ille-et-Vilaine", "36" => "Indre", "37" => "Indre-et-Loire",
@@ -150,7 +150,7 @@ if (isset($_SESSION['typedutilisateur']) && $_SESSION['typedutilisateur'] === 'u
                             "78" => "Yvelines", "79" => "Deux-Sèvres", "80" => "Somme", "81" => "Tarn", "82" => "Tarn-et-Garonne",
                             "83" => "Var", "84" => "Vaucluse", "85" => "Vendée", "86" => "Vienne", "87" => "Haute-Vienne", "88" => "Vosges",
                             "89" => "Yonne", "90" => "Territoire de Belfort", "91" => "Essonne", "92" => "Hauts-de-Seine", "93" => "Seine-Saint-Denis",
-                            "94" => "Val-de-Marne", "95" => "Val-d'Oise"
+                            "94" => "Val-de-Marne", "95" => "Val-dOise"
                         ];
                         foreach ($departements as $code => $nom) {
                             $selected = ($_SESSION["departement"] == $nom) ? 'selected' : '';
