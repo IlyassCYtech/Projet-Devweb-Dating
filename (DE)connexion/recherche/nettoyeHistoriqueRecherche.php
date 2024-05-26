@@ -10,14 +10,14 @@ $filtreLignes = [];
 
 foreach ($historiqueRecherches as $ligne) {
     $ligneArr = explode(";", $ligne);
-    // Check if the email matches the first element of the line
+   // Vérifier si le mail correspond au premier élément de la ligne
     if (strcmp($email, $ligneArr[0]) !== 0) {
-        // If it doesn't match, add the line to the filteredLines array
+       // Si la ligne ne correspond pas, elle est ajoutée au tableau filteredLines
         $filtreLignes[] = $ligne;
     }
 }
 
-// Write the filtered lines back to the file
+// Écrire les lignes filtrées dans le fichier
 file_put_contents($filePath, implode(PHP_EOL, $filtreLignes) . PHP_EOL);
 
 ?>
