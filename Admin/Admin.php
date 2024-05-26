@@ -134,7 +134,7 @@ if ($userDataFile) {
     </table>
 
 
-        <!-- Fenêtre modale -->
+        <!-- Fenêtre de modération -->
         <div id="ban-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -153,7 +153,7 @@ if ($userDataFile) {
     </div>
     <!-- Inclure les scripts JavaScript ou d'autres dépendances ici -->
 
-    <!-- Modal Div -->
+    <!-- div de modération -->
     <div id="messageModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
@@ -161,7 +161,7 @@ if ($userDataFile) {
         <div class="contacts">
             <h2>Contacts</h2>
             <ul id="contacts-list">
-                <!-- Contacts will be added here dynamically -->
+                <!-- les contacts seront ajoutés ici dynamiquement -->
             </ul>
         </div>
     
