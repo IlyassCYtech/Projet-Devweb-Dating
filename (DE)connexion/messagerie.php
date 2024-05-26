@@ -74,7 +74,7 @@ if (isset($_SESSION['typedutilisateur']) && $_SESSION['typedutilisateur'] === 'u
         <div class="contacts">
             <h2>Contacts</h2>
             <ul id="contacts-list">
-                <!-- Contacts will be added here dynamically -->
+                <!-- les contacts seront ajoutés ici dynamiquement -->
             </ul>
         </div>
     
