@@ -13,7 +13,10 @@
     php -S localhost:8000
     ```
 4) Ouvrez localhost sur la barre du navigateur
-   ![image](https://github.com/IlyassCYtech/devweb/assets/130382885/d55a1bfb-f196-4931-8a15-2974639f0904)
+    ```sh
+    http://localhost:8080/index.html
+    ```
+   
 
 ---
 
