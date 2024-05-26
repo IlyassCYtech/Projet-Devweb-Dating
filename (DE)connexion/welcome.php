@@ -127,7 +127,7 @@ if (isset($_SESSION['typedutilisateur']) && $_SESSION['typedutilisateur'] === 'u
 </div>
 <?php
 if (isset($_SESSION['typedutilisateur']) && $_SESSION['typedutilisateur'] === 'user') {
-    echo '<img src="../img/Prenium love.png" alt="User Image" style="width: 20%;">';
+    echo '<img src="../img/Premium_love.png" alt="User Image" style="width: 20%;">';
 } else {
   echo '<img src="../img/7.png" alt="User Image" style="width: 20%;">';
 }
