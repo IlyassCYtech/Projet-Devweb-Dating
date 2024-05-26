@@ -3,14 +3,17 @@
 
 ###   PRÉREQUIS
 1) Télécharger tous les fichiers dans le même dossier.
-2) Installer make et faire se donner les droits pour l'execution de Home.sh.
+2) Installer php dans votre pc
 ```sh
-sudo apt install make 
+sudo apt install php
 ```
+3) Lancer loclalhsot au niveau du dossier racine dans le terminal
 ```sh
-chmod 777 Home.sh 
+php -S localhost:8000
 ```
-`
+4) Ouvrir localhost sur la bare du navigateur
+![image](https://github.com/IlyassCYtech/devweb/assets/130382885/d55a1bfb-f196-4931-8a15-2974639f0904)
+
 
 
 ###   UTILISER AVEC UN INTERFACE
