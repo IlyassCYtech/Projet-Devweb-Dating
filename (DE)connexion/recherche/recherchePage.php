@@ -37,7 +37,7 @@
               <li><a href="../welcome.php">Accueil</a></li>
               <li><a href="../messagerie.php">Messagerie</a></li>
               <li><a href="../info.php">Profil</a></li>
-              <li><a href="../parametres.html">Paramètres</a></li>
+              <li><a href="../parametres.php">Paramètres</a></li>
             </ul>
           </nav>
           
