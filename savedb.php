@@ -157,7 +157,7 @@ function saveInDb ()
     }
 
     // Définir le type d'utilisateur en fonction du genre
-    $typedutilisateur = ($gender == 'Woman') ? 'user+' : 'user';
+    $typedutilisateur = ($gender == 'woman') ? 'user+' : 'user';
 
     $userData = array(
         $nickname,
