@@ -113,7 +113,7 @@ if (isset($_SESSION['typedutilisateur']) && $_SESSION['typedutilisateur'] === 'u
 <?php
 // Vérification de la session utilisateur
 if (isset($_SESSION['typedutilisateur']) && $_SESSION['typedutilisateur'] === 'user') {
-    echo '<img src="../img/pubecosse.png" alt="User Image" style="width: 20%;">';
+    echo '<img src="../img/Pubpasinteressant.png" alt="User Image" style="width: 20%;">';
 } else {
   echo '<img src="../img/5.png" alt="User Image" style="width: 20%;">';
 }
