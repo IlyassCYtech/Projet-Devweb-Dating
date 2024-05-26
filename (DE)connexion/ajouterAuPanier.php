@@ -1,3 +1,4 @@
+<!-- rajouter une personne à son panier -->
 <?php
 session_start();
 
